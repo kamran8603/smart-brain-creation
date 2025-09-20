@@ -1,46 +1,3 @@
-// import React from "react";
-// import { Outlet, useLocation } from "react-router-dom";
-// import Navbar from "./Navbar";
-
-// import homeimg from "../assets/background.jpg";
-// import aboutimg from "../assets/aboutus.png";
-// import contactimg from "../assets/contact.png";
-// import eventsimg from "../assets/background.jpg";
-// import labsimg from "../assets/labs.png";
-
-// const routeBackgrounds = {
-//   "/" : homeimg,
-//   "/about": aboutimg,
-//   "/contact": contactimg,
-//   "/events": eventsimg,
-//   "/labs": labsimg
-// };
-
-// function Approuter() {
-//   const location = useLocation();
-//   const bg = routeBackgrounds[location.pathname] || "https://picsum.photos/1200/800";
-
-//   return (
-//     <div
-//       style={{
-//         minHeight: "100vh",
-//         backgroundImage: `url(${bg})`,
-//         backgroundSize: "cover",
-//         backgroundPosition: "center",
-//         paddingTop: "30px" // navbar height ke liye space
-//       }}
-//     >
-//       <Navbar /> {/* fixed navbar */}
-      
-//       {/* Page content */}
-//       <div>
-//         <Outlet />
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Approuter;
 import React from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
@@ -50,51 +7,57 @@ import aboutimg from "../assets/aboutus.png";
 import contactimg from "../assets/contact.png";
 import eventsimg from "../assets/background.jpg";
 import labsimg from "../assets/labs.png";
+import "./approuter.css";
+
+import { homedata } from "../utils";  // 👈 import
 
 const routeBackgrounds = {
-  "/" : homeimg,
+  "/": homeimg,
   "/about": aboutimg,
   "/contact": contactimg,
   "/events": eventsimg,
-  "/labs": labsimg
+  "/labs": labsimg,
 };
 
 function Approuter() {
   const location = useLocation();
-  const bg = routeBackgrounds[location.pathname] || "https://picsum.photos/1200/800";
+  const bg =
+    routeBackgrounds[location.pathname] ||
+    "https://picsum.photos/1200/800";
+
+  const content = homedata[location.pathname]; // 👈 current route ka data
 
   return (
     <div>
       {/* Hero Section with Background */}
       <div
-        style={{
-          height: "100vh",
-          backgroundImage: `url(${bg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          position: "relative",
-          
-        }}
+        className="hero-section"
+        style={{ backgroundImage: `url(${bg})` }}
       >
         <Navbar />
-        <div
-          style={{
-            height: "100%",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "white",
-         
-          }}
-        >
-          <h1 style={{ fontSize: "3rem", fontWeight: "bold" }}>
-            {location.pathname === "/" ? "Welcome Home" : location.pathname.replace("/", "")}
-          </h1>
+        <div className="hero-content">
+          <div className="words">
+
+        
+          {content ? (
+            <>
+              <h1>{content.maintext}</h1>
+              <p>{content.paragraph}</p>
+              <div className="hero-buttons">
+                {content.btn && <button className="btn1">{content.btn}</button>}
+                {content.btn2 && <button className="btn2">{content.btn2}</button>}
+              </div>
+              
+            </>
+          ) : (
+            <h1>Page Not Found</h1>
+          )}
+          </div>
         </div>
       </div>
 
       {/* Rest of Page Content */}
-      <div style={{ minHeight: "300vh", background: "#f9f9f9", padding: "20px",    marginTop:"20px" }}>
+      <div className="page-content">
         <Outlet />
       </div>
     </div>

@@ -18,7 +18,7 @@ function Navbar() {
         <button className='gameZone flex items-center gap-1 px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-700'>
           <IoGameControllerOutline className='icons' /> Game Zone
         </button>
-        <p className='h-20 border-2'>hell</p>
+      
       </div>
     </nav>
   );

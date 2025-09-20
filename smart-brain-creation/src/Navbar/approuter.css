@@ -1,0 +1,175 @@
+/* 
+.hero-section {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 20px;
+    border: 2px solid black;
+  }
+  
+
+  .hero-content {
+    height: 80%;
+    width: 100%;
+    border: 2px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    
+    text-align: center;
+  }
+  .words{
+    border: 2px solid white;
+    width: 40%;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+
+  .page-content {
+    min-height: 300vh;   
+    background: red;
+    padding: 20px;
+    margin-top: 20px;
+   
+  }
+   */
+
+   /* Full hero background section */
+.hero-section {
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Centered text inside hero */
+  .hero-content {
+    height: auto;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+
+    border: 2px solid red;
+  }
+  
+  .words {
+    
+    width: 35%;
+    border: 2px solid white;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  /* Headline */
+  .hero-content h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  
+  /* Paragraph */
+  .hero-content p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Buttons container */
+  .hero-buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+
+  .btn1{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #5f117c;
+    color: white;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: 0.3s;
+  }
+  .btn2{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #FFF6F6;
+    opacity: 0.9;
+    color: white;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    transition: 0.3s;
+    border: 2px solid white;
+  }
+  
+  .hero-buttons button:hover {
+    background: #7d1aa5;
+  }
+  
+  /* Page content after hero */
+  .page-content {
+    min-height: 300vh;
+    background: red;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* =====================
+     RESPONSIVENESS
+  ===================== */
+  
+  /* Tablets */
+  @media (max-width: 992px) {
+    .words {
+      width: 70%;
+    }
+  }
+  
+  /* Mobiles */
+  @media (max-width: 600px) {
+    .hero-section {
+      height: auto;
+      padding: 40px 20px;
+    }
+  
+    .words {
+      width: 100%;
+    }
+  
+    .hero-content {
+      padding: 10px;
+    }
+  
+    .hero-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .hero-buttons button {
+      width: 100%;
+      max-width: 250px;
+    }
+  }
+  

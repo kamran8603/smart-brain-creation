@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import About from "../pages/About";
-import Contact from "../pages/Contact";
-import ErrorPage from "../pages/ErrorPage";
-import Events from "../pages/Events";
-import Home from "../pages/Home";
-import Labs from "../pages/Labs";
-import Programs from "../pages/Programs";
+import About from "../pages/About/About";
+import Contact from "../pages/contact/Contact";
+import ErrorPage from "../pages/error/ErrorPage";
+import Events from "../pages/Events/Events";
+import Home from "../pages/Home/Home";
+import Labs from "../pages/labs/Labs";
+import Programs from "../pages/programs/Programs";
 import Approuter from "../Navbar/Approuter";
 
 export const routes = [
