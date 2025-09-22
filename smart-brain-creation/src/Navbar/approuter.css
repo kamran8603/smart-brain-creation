@@ -90,7 +90,7 @@
   /* Page content after hero */
   .page-content {
     min-height: 300vh;
-    background: red;
+    
     padding: 20px;
     margin-top: 20px;
   }
