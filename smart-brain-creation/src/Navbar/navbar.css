@@ -1,18 +1,15 @@
-
-
-
 .navbar {
     width: 100%;
     max-width: 1200px; /* Prevents overflow */
     box-sizing: border-box; /* Includes padding/border in width */
     margin: 0 auto;
+ 
     min-height: 70px;
     display: flex;
     justify-content: space-between; 
     align-items: center;
     background: #fff6f6;
     border-radius: 25px;
-   
     box-shadow: 0 4px 24px rgba(95, 17, 124, 0.08);
     padding: 0.6rem 2rem;
     position: relative;
@@ -68,6 +65,7 @@
   }
   
   .gameZone:hover {
+    width: 100%;
     background: #fff;
     color: #5f117c;
     border: 2px solid #5f117c;
@@ -80,7 +78,7 @@
   
   @media (max-width: 992px) {
     .navbar {
-      width: 99%;
+      width: 100%;
       padding: 0.5rem 1rem;
     }
     .logo {
