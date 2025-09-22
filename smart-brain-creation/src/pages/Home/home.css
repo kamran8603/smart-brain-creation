@@ -212,3 +212,86 @@
     padding: 0.5rem 1rem;
   }
 }
+/* design for difrent part  */
+.home-cta-section {
+  border: 2px solid red;
+  margin-top: 30px;
+  margin: 3rem auto 0 auto;
+  text-align: center;
+  max-width: 700px;
+}
+
+.cta-head {
+  color: #5f117c;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.cta-para {
+  color: #46105e;
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  line-height: 1.4;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.cta-btn.primary {
+  background: #5f117c;
+  color: #fff;
+}
+
+.cta-btn.primary:hover {
+  background: #46105e;
+}
+
+.cta-btn.secondary {
+  background: #e9d6f7;
+  color: #5f117c;
+}
+
+.cta-btn.secondary:hover {
+  background: #d1b3e6;
+}
+
+.cta-btn .arrow {
+  font-size: 1.2em;
+  margin-left: 4px;
+}
+
+@media (max-width: 600px) {
+  .home-cta-section {
+    margin-top: 2rem;
+    padding: 0 0.5rem;
+  }
+  .cta-head {
+    font-size: 1.3rem;
+  }
+  .cta-para {
+    font-size: 1rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}

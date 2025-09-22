@@ -84,7 +84,24 @@ const Home = () => {
           </div>
         ))}
       </div>
-      
+      <div>
+
+      </div>
+      <div className="home-cta-section">
+  <h2 className="cta-head">Ready to Transform Education at Your School?</h2>
+  <p className="cta-para">
+    Join hundreds of schools already providing cutting-edge creative education<br />
+    to their students.
+  </p>
+  <div className="cta-buttons">
+    <button className="cta-btn primary">
+      Explore Programs <span className="arrow">&rarr;</span>
+    </button>
+    <button className="cta-btn secondary">
+      Contact us
+    </button>
+  </div>
+</div>
     </div>
   );
 };
