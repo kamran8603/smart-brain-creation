@@ -9,7 +9,7 @@ import eventsimg from "../assets/background.jpg";
 import labsimg from "../assets/labs.png";
 import "./approuter.css";
 
-import { homedata } from "../utils";  // 👈 import
+import { homedata } from "../utils";  
 
 const routeBackgrounds = {
   "/": homeimg,
@@ -25,11 +25,10 @@ function Approuter() {
     routeBackgrounds[location.pathname] ||
     "https://picsum.photos/1200/800";
 
-  const content = homedata[location.pathname]; // 👈 current route ka data
-
+  const content = homedata[location.pathname]; 
   return (
     <div>
-      {/* Hero Section with Background */}
+      
       <div
         className="hero-section"
         style={{ backgroundImage: `url(${bg})` }}

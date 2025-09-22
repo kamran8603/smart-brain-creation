@@ -1,62 +1,21 @@
-/* 
 .hero-section {
     height: 80vh;
     background-size: cover;
     background-position: center;
     position: relative;
-    padding-top: 20px;
-    border: 2px solid black;
-  }
-  
-
-  .hero-content {
-    height: 80%;
-    width: 100%;
-    border: 2px solid blue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    
-    text-align: center;
-  }
-  .words{
-    border: 2px solid white;
-    width: 40%;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-
-  .page-content {
-    min-height: 300vh;   
-    background: red;
-    padding: 20px;
-    margin-top: 20px;
-   
-  }
-   */
-
-   /* Full hero background section */
-.hero-section {
-    height: 80vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    padding-top: 20px;
+    padding-top: 30px; /* Show background above navbar */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start; /* Start from top */
+    /* Remove border for production */
+    /* border: 5px solid green; */
+    margin-top: 0; /* Remove extra margin */
   }
   
   /* Centered text inside hero */
   .hero-content {
-    height: auto;
+    height: 200vh;
     width: 100%;
     max-width: 1200px;
     display: flex;
@@ -65,14 +24,14 @@
     flex-direction: column;
     color: white;
     text-align: center;
-
-    border: 2px solid red;
+  
+   
   }
   
   .words {
     
-    width: 35%;
-    border: 2px solid white;
+    width: 63%;
+    
     padding: 15px;
     border-radius: 10px;
   }
@@ -172,4 +131,3 @@
       max-width: 250px;
     }
   }
-  
