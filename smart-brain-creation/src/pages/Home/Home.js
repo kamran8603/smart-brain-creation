@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import { homecontent } from "../../utils";
+import Footer from "../Footer/Footer";
 
 const cardData = [
   {
@@ -55,6 +56,9 @@ const cardData = [
 
 const Home = () => {
   return (
+ 
+
+
     <div className="home-main">
       <h2 className="home-head">{homecontent.head}</h2>
       <p className="home-para">{homecontent.para}</p>
@@ -87,6 +91,8 @@ const Home = () => {
       <div>
 
       </div>
+
+         <div className="my-container">
       <div className="home-cta-section">
   <h2 className="cta-head">Ready to Transform Education at Your School?</h2>
   <p className="cta-para">
@@ -103,6 +109,8 @@ const Home = () => {
   </div>
 </div>
     </div>
+    <Footer />
+        </div>
   );
 };
 
