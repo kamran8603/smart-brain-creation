@@ -89,8 +89,8 @@
   
   /* Page content after hero */
   .page-content {
-    min-height: 300vh;
-    
+    min-height: 220vh;
+    border: 2px solid blue;
     padding: 20px;
     margin-top: 20px;
   }

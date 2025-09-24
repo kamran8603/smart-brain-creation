@@ -46,6 +46,20 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* last line */}
+      <div className="about-us-image">
+                     <div className="founder-quote-section-exact">
+        <div className="quote-content-exact">
+          <div className="quote-text-exact">
+            "You were born with ideas no one else has — my job is to give you the tools to bring them to life."
+          </div>
+          <div className="founder-signature-exact">
+            — Founder, SmartBrain Creations
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
   );
 };
