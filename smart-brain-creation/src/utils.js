@@ -19,6 +19,13 @@ export const homedata = {
       btn: "Explore Programs",
       btn2: "Contact us",
     },
+    "/programs": {
+      maintext: "Creative & Digital Education",
+      paragraph:"For Classes 1–12",  
+      btn: "Explore Programs",
+      btn2: "Contact us",
+    },
+
     "/contact": {
       maintext: "Connect with us",
       paragraph:
@@ -48,3 +55,45 @@ export const homedata = {
   img5: homefifth,
   img6: homesixth,
   }
+
+  export const programsData = [
+  {
+    icon: "🎓",
+    title: "Foundation Years",
+    ageRange: "Classes 1-3",
+    description: "Building creative foundations through play and exploration",
+    features: [
+      "Basic drawing and coloring",
+      "Simple crafts and clay work",
+      "Introduction to digital tools",
+      "Storytelling through art",
+    ],
+    projects: "8+ projects per year",
+  },
+  {
+    icon: "📚",
+    title: "Middle School",
+    ageRange: "Classes 4-6",
+    description: "Exploring creativity with structured projects",
+    features: [
+      "Advanced drawing techniques",
+      "Introduction to design thinking",
+      "Team-based creative challenges",
+      "Exploring digital media",
+    ],
+    projects: "12+ projects per year",
+  },
+  {
+    icon: "🖌️",
+    title: "Senior School",
+    ageRange: "Classes 7-9",
+    description: "Building advanced skills in arts and technology",
+    features: [
+      "Painting and sculpture",
+      "Creative writing through visuals",
+      "Advanced digital tools",
+      "Collaborative group projects",
+    ],
+    projects: "15+ projects per year",
+  },
+];

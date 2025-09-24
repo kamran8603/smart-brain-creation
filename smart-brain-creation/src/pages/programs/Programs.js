@@ -1,11 +1,39 @@
-import React from 'react'
+import React from "react";
+import Footer from "../Footer/Footer"
+// import "./programs.css";
+import FoundationCard from "../../components/FoundationCard";
+import { programsData } from "../../utils";
 
-function Programs() {
+const Programs = () => {
   return (
-    <div>
-      this is Programs
-    </div>
-  )
-}
+    <div className="learning-paths-container">
+      <div className="conatiner-section">
+        
+        {/* Header Section */}
+        <div className="header-section">
+          <h1 className="main-title">Age-Appropriate Learning Paths</h1>
+          <p className="subtitle">
+            Each program is carefully designed to match students' developmental stages
+          </p>
+        </div>
 
-export default Programs
+        {/* All Cards via map */}
+        {programsData.map((program, idx) => (
+          <FoundationCard
+            key={idx}
+            icon={program.icon}
+            title={program.title}
+            ageRange={program.ageRange}
+            description={program.description}
+            features={program.features}
+            projects={program.projects}
+          />
+        ))}
+
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default Programs;

@@ -14,6 +14,7 @@ import { homedata } from "../utils";
 const routeBackgrounds = {
   "/": homeimg,
   "/about": aboutimg,
+  "/programs": aboutimg,
   "/contact": contactimg,
   "/events": eventsimg,
   "/labs": labsimg,

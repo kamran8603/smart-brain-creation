@@ -12,6 +12,7 @@ function Navbar() {
       <div className='navbar-btns flex items-center space-x-4 border-2 border-solid border-black'>
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
+        <Link to="/programs">Programs</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/events">Events</Link>
         <Link to="/labs">Labs</Link>
