@@ -21,7 +21,7 @@
 .main-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #1e293b;
+  color: #5F117C;
   margin-bottom: 16px;
   line-height: 1.2;
 }
@@ -29,7 +29,7 @@
 .subtitle {
   font-size: 1.125rem;
   color: #64748b;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   line-height: 1.6;
 }
@@ -46,7 +46,8 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
   overflow: hidden;
-  border: 2px solid red;
+ 
+  color: #5f117c;
 }
 
 .foundation-card:hover {
@@ -60,13 +61,13 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
-  border: 2px solid green;
+ 
 }
 
 /* Left Side Styles */
 .card-left {
   flex: 1;
-  border: 2px solid blue;
+
 }
 
 .card-header {
@@ -114,12 +115,13 @@
 }
 
 .card-description {
-    border: 2px solid yellow;
-  font-size: 2.125rem;
-  color: #4b5563;
+  
+    color: #5f117c;
+  font-size: 1rem;
+
   margin-bottom: 32px;
   line-height: 1.6;
-  font-weight: 500;
+ 
 }
 
 /* Features Grid */
@@ -127,19 +129,24 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 24px;
+
+  color: #5E5B5B;
+  
 }
 
 .feature-item {
   display: flex;
   align-items: center;
   gap: 12px;
+  color: #4b5563;
+
 }
 
 .feature-icon {
   width: 20px;
   height: 20px;
-  background-color: #a855f7;
-  color: white;
+
+  color: #A173B2;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -150,9 +157,12 @@
 }
 
 .feature-text {
-  font-size: 0.95rem;
-  color: #4b5563;
+  font-size: 0.85rem;
+
   line-height: 1.5;
+
+  font-weight: 300;
+  color: #4b5563;
 }
 
 /* Right Side Styles */
@@ -162,14 +172,16 @@
   align-items: center;
   gap: 16px;
   min-width: 180px;
-  border: 2px solid red;
+  color: #5f117c;
+ 
 }
 
 .calendar-icon {
-  width: 64px;
-  height: 64px;
-  background-color: #7c3aed;
-  border-radius: 16px;
+  width: 124px;
+  height: 124px;
+  background-color: #A43CC2;
+  border-radius: 50%;
+ 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,6 +192,8 @@
 
 .projects-info {
   text-align: center;
+  
+  font-weight: 300;
 }
 
 .projects-number {
@@ -188,12 +202,16 @@
   color: #374151;
   line-height: 1.2;
   margin-bottom: 4px;
+ 
 }
 
 .projects-description {
   font-size: 0.875rem;
   color: #6b7280;
   line-height: 1.4;
+
+  color: #A43CC2;
+  font-weight: 400;
 }
 
 /* Responsive Design */

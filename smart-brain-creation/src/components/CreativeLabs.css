@@ -1,0 +1,82 @@
+/* components/CreativeLab.css */
+.creative-lab {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .creative-lab-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .creative-lab-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .creative-lab-subtitle {
+    font-size: 1.1rem;
+    font-style: italic;
+    opacity: 0.8;
+  }
+  
+  .creative-lab-sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .creative-lab-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid currentColor;
+  }
+  
+  .section-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .section-item {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    transition: transform 0.2s ease;
+  }
+  
+  .section-item:hover {
+    transform: translateX(5px);
+  }
+  
+  .section-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .creative-lab {
+      padding: 1rem;
+    }
+    
+    .creative-lab-title {
+      font-size: 2rem;
+    }
+    
+    .creative-lab-sections {
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,6 +1,7 @@
 import React from "react";
 import { SlCalender } from "react-icons/sl";
 import "../pages/programs/programs.css";
+import { FaStar } from "react-icons/fa";
 
 const FoundationCard = ({ 
   icon, 
@@ -24,12 +25,12 @@ const FoundationCard = ({
             </div>
           </div>
 
-          <h2 className="card-description">{description}</h2>
+          <p className="card-description">{description}</p>
 
           <div className="features-grid">
             {features.map((item, idx) => (
               <div key={idx} className="feature-item">
-                <span className="feature-icon">+</span>
+                <span className="feature-icon"><FaStar /></span>
                 <span className="feature-text">{item}</span>
               </div>
             ))}
@@ -42,7 +43,7 @@ const FoundationCard = ({
             <SlCalender />
           </div>
           <div className="projects-info">
-            <div className="projects-number">{projects}</div>
+           <p>{projects}</p>
             <div className="projects-description">Hands-on creative projects</div>
           </div>
         </div>

@@ -13,9 +13,10 @@ function Navbar() {
         <Link to="/">Home</Link>
         <Link to="/about">About</Link>
         <Link to="/programs">Programs</Link>
+        <Link to="/labs">Labs</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/events">Events</Link>
-        <Link to="/labs">Labs</Link>
+        
         <button className='gameZone flex items-center gap-1 px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-700'>
           <IoGameControllerOutline className='icons' /> Game Zone
         </button>

@@ -5,6 +5,8 @@ import homethird from "./assets/home3 20.png";
 import homefourth from "./assets/home4.png";
 import homefifth from "./assets/home5.png";
 import homesixth from "./assets/home6.png";
+import { FaGraduationCap } from "react-icons/fa6";
+
 
 export const homedata = {
     "/": {
@@ -58,7 +60,7 @@ export const homedata = {
 
   export const programsData = [
   {
-    icon: "🎓",
+    icon: <FaGraduationCap />,
     title: "Foundation Years",
     ageRange: "Classes 1-3",
     description: "Building creative foundations through play and exploration",
@@ -71,29 +73,135 @@ export const homedata = {
     projects: "8+ projects per year",
   },
   {
-    icon: "📚",
-    title: "Middle School",
+    icon: <FaGraduationCap />,
+    title: "Discovery Phase",
     ageRange: "Classes 4-6",
-    description: "Exploring creativity with structured projects",
+    description: "Exploring various creative mediums and digital literacy",
     features: [
-      "Advanced drawing techniques",
-      "Introduction to design thinking",
-      "Team-based creative challenges",
-      "Exploring digital media",
+      "Advanced art techniques",
+      "Basic animation concepts",
+      "Photography fundamentals",
+      "Creative writing integration",
+    ],
+    projects: "10+ projects per year",
+  },
+  {
+    icon: <FaGraduationCap />,
+    title: "Development Stage",
+    ageRange: "Classes 7-8",
+    description: "Developing technical skills and creative thinking",
+    features: [
+      "Digitaldesign principals",
+      "Video editing basics",
+      "Web design introduction",
+      "Portfolio development",
     ],
     projects: "12+ projects per year",
   },
   {
-    icon: "🖌️",
-    title: "Senior School",
-    ageRange: "Classes 7-9",
-    description: "Building advanced skills in arts and technology",
+    icon: <FaGraduationCap />,
+    title: "Mastery Level",
+    ageRange: "Classes 9-10",
+    description: "Advanced creative skills and project-based learning",
     features: [
-      "Painting and sculpture",
-      "Creative writing through visuals",
-      "Advanced digital tools",
-      "Collaborative group projects",
+      "Professional design tools",
+      "Advanced animation",
+      "UI/UX design basics",
+      "Client project simulations",
     ],
     projects: "15+ projects per year",
   },
+  {
+    icon: <FaGraduationCap />,
+    title: "Specialization Track",
+    ageRange: "Classes 11-12",
+    description: "Career-focused creative education and portfolio building",
+    features: [
+      "Industry-standard software",
+      "Portfolio development",
+      "Internship opportunities",
+      "Career guidance",
+    ],
+    projects: "20+ projects per year",
+  },
+];
+
+// data/labsData.js
+export const datalabs = {
+  title: "Creative Lab",
+  subtitle: "Traditional art meets modern creativity",
+  sections: [
+    {
+      title: "Activities & Projects",
+      items: [
+        "Drawing & Sketching",
+        "Play Modeling", 
+        "Painting & Watercolors",
+        "Collage & Mixed Media",
+        "Crafts & Paper Art",
+        "Textile Arts"
+      ]
+    },
+    {
+      title: "Equipment & Tools",
+      items: [
+        "Art Supplies",
+        "Pottery Wheels", 
+        "Drawing Tablets",
+        "Craft Materials"
+      ]
+    }
+  ]
+};
+
+export const labsData = [
+  {
+    title: "Creative Lab",
+    subtitle: "Traditional art meets modern creativity",
+    sections: {
+      activities: {
+        title: "Activities & Projects",
+        items: [
+          "Drawing & Sketching",
+          "Clay Modeling", 
+          "Painting & Watercolors",
+          "Collage & Mixed Media",
+          "Crafts & Paper Art",
+          "Textile Arts"
+        ]
+      },
+      equipment: {
+        title: "Equipment & Tools",
+        items: [
+          { left: "Art Supplies", right: "Pottery Wheels" },
+          { left: "Drawing Tablets", right: "Craft Materials" },
+          { left: "Easels", right: null }
+        ]
+      }
+    }
+  },
+  {
+    title: "Digital Lab",
+    subtitle: "Cutting-edge digital creation space",
+    sections: {
+      activities: {
+        title: "Activities & Projects",
+        items: [
+          "Digital Animation",
+          "Photography & Editing",
+          "Game Design",
+          "Video Production",
+          "Graphic Design"
+        ]
+      },
+      equipment: {
+        title: "Equipment & Tools",
+        items: [
+          { left: "High-end Computers", right: "Graphics Tablets" },
+          { left: "Green Screen", right: "Editing Software" },
+          { left: "Professional Cameras", right: null }
+        ]
+      }
+    }
+  }
 ];
