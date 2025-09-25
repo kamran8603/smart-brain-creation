@@ -12,7 +12,7 @@ const FoundationCard = ({
 }) => {
   return (
     <div className="foundation-card">
-      <div className="card-content">
+      <div className="card-contents">
         
         {/* Left Side */}
         <div className="card-left">

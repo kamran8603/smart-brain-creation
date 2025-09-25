@@ -3,6 +3,7 @@ import "./about.css";
 import { aboutContent } from "../../assets/aboutus.png"; 
 import about_img_one from "../../assets/about-content-1.png"
 import about_img_two from "../../assets/aboutimg-2.png"
+import Footer from "../../pages/Footer/Footer"
 
 const About = () => {
   return (
@@ -60,6 +61,7 @@ const About = () => {
         </div>
       </div>
       </div>
+      <Footer/>
     </div>
   );
 };
