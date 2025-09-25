@@ -216,7 +216,7 @@ export const labsData = [
         title: "Activities & Projects",
         items: [
           "Drawing & Sketching",
-          "Play Modeling", 
+          "Clay Modeling",
           "Painting & Watercolors",
           "Collage & Mixed Media",
           "Crafts & Paper Art",
@@ -228,7 +228,7 @@ export const labsData = [
         items: [
           { left: "Art Supplies", right: "Pottery Wheels" },
           { left: "Drawing Tablets", right: "Craft Materials" },
-          { left: "Easels", right: null } // Use null for single items
+          { left: "Easels", right: "" }
         ]
       }
     }
@@ -241,6 +241,7 @@ export const labsData = [
         title: "Activities & Projects",
         items: [
           "Digital Animation",
+          "UI/UX Design",
           "Photography & Editing",
           "Game Design",
           "Video Production",
@@ -250,9 +251,9 @@ export const labsData = [
       equipment: {
         title: "Equipment & Tools",
         items: [
-          { left: "High-end Computers", right: "Graphics Tablets" },
-          { left: "Green Screen", right: "Editing Software" },
-          { left: "Professional Cameras", right: null } // Use null for single items
+          { left: "High-end Computers", right: "Green Screen" },
+          { left: "Graphics Tablets", right: "Editing Software" },
+          { left: "Professional Cameras", right: "" }
         ]
       }
     }
