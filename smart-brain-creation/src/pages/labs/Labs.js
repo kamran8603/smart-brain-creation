@@ -2,6 +2,7 @@ import React from 'react';
 import './labs.css';
 import { labsData } from '../../utils';
 import labs from "../../assets/lab-data.png"
+import Footer from '../Footer/Footer';
 
 const Labs = () => {
   return (
@@ -58,6 +59,7 @@ const Labs = () => {
           </div>
         </div>
       ))}
+      <Footer/>
     </div>
   );
 };

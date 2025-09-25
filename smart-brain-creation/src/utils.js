@@ -154,6 +154,59 @@ export const datalabs = {
   ]
 };
 
+// export const labsData = [
+//   {
+//     title: "Creative Lab",
+//     subtitle: "Traditional art meets modern creativity",
+//     sections: {
+//       activities: {
+//         title: "Activities & Projects",
+//         items: [
+//           "Drawing & Sketching",
+//           "Clay Modeling", 
+//           "Painting & Watercolors",
+//           "Collage & Mixed Media",
+//           "Crafts & Paper Art",
+//           "Textile Arts"
+//         ]
+//       },
+//       equipment: {
+//         title: "Equipment & Tools",
+//         items: [
+//           { left: "Art Supplies", right: "Pottery Wheels" },
+//           { left: "Drawing Tablets", right: "Craft Materials" },
+//           { left: "Easels", right: null }
+//         ]
+//       }
+//     }
+//   },
+//   {
+//     title: "Digital Lab",
+//     subtitle: "Cutting-edge digital creation space",
+//     sections: {
+//       activities: {
+//         title: "Activities & Projects",
+//         items: [
+//           "Digital Animation",
+//           "Photography & Editing",
+//           "Game Design",
+//           "Video Production",
+//           "Graphic Design"
+//         ]
+//       },
+//       equipment: {
+//         title: "Equipment & Tools",
+//         items: [
+//           { left: "High-end Computers", right: "Graphics Tablets" },
+//           { left: "Green Screen", right: "Editing Software" },
+//           { left: "Professional Cameras", right: null }
+//         ]
+//       }
+//     }
+//   }
+// ];
+
+
 export const labsData = [
   {
     title: "Creative Lab",
@@ -163,7 +216,7 @@ export const labsData = [
         title: "Activities & Projects",
         items: [
           "Drawing & Sketching",
-          "Clay Modeling", 
+          "Play Modeling", 
           "Painting & Watercolors",
           "Collage & Mixed Media",
           "Crafts & Paper Art",
@@ -175,7 +228,7 @@ export const labsData = [
         items: [
           { left: "Art Supplies", right: "Pottery Wheels" },
           { left: "Drawing Tablets", right: "Craft Materials" },
-          { left: "Easels", right: null }
+          { left: "Easels", right: null } // Use null for single items
         ]
       }
     }
@@ -199,7 +252,7 @@ export const labsData = [
         items: [
           { left: "High-end Computers", right: "Graphics Tablets" },
           { left: "Green Screen", right: "Editing Software" },
-          { left: "Professional Cameras", right: null }
+          { left: "Professional Cameras", right: null } // Use null for single items
         ]
       }
     }

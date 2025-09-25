@@ -1,23 +1,26 @@
-labs.css
+
 .creative-lab-container {
     display: flex;
+    justify-content: space-evenly;
     max-width: 1200px;
     margin: 2rem auto;
     background: #fff;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 2px solid blue;
   }
   
-  /* Left Section */
+ 
   .creative-lab-left {
-    width: 50%;
+    width: 35%;
     position: relative;
-    background: linear-gradient(to bottom right, #fef3c7, #fdba74);
-    padding: 2rem;
+  
+  
     display: flex;
     align-items: center;
     justify-content: center;
+  
   }
   
   .creative-lab-left img {
@@ -26,15 +29,19 @@ labs.css
     object-fit: cover;
     border-radius: 0.75rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+   
   }
   
-  /* Right Section */
+ 
   .creative-lab-right {
-    width: 50%;
+    width: 45%;
     background: linear-gradient(to bottom right, #e9d5ff, #d8b4fe, #a78bfa);
     padding: 2rem;
     display: flex;
     align-items: center;
+ 
+    border-radius: 15px;
+    
   }
   
   .creative-lab-content {
@@ -42,24 +49,29 @@ labs.css
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+ 
   }
   
-  /* Header */
+
   .lab-header h1 {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 700;
     color: #4c1d95;
     margin-bottom: 0.5rem;
     line-height: 1.2;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .lab-header p {
     font-size: clamp(1rem, 2vw, 1.25rem);
     color: #6b21a8;
     line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
-  /* Section */
+
   .lab-section {
     margin-bottom: 1rem;
   }
@@ -70,19 +82,23 @@ labs.css
     color: #4c1d95;
     margin-bottom: 0.75rem;
     line-height: 1.3;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
-  /* Activities */
+
   .activities-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .activity-item {
     background: rgba(255, 255, 255, 0.9);
     color: #5b21b6;
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 0.5rem;
     border-radius: 2rem;
     font-size: clamp(0.8rem, 1.5vw, 0.95rem);
     font-weight: 500;
@@ -90,6 +106,15 @@ labs.css
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.5);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 0; 
+    max-width: 100%; 
+    box-sizing: border-box; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
   
   .activity-item:hover {
@@ -98,11 +123,12 @@ labs.css
     background: rgba(255, 255, 255, 1);
   }
   
-  /* Equipment */
+
   .equipment-list {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    width: 100%;
   }
   
   .equipment-row {
@@ -111,12 +137,14 @@ labs.css
     flex-wrap: wrap;
     color: #5b21b6;
     gap: 0.5rem;
+    width: 100%;
   }
   
   .star {
     color: #7c3aed;
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     margin-right: 0.25rem;
+    flex-shrink: 0;
   }
   
   .equipment-text {
@@ -124,11 +152,13 @@ labs.css
     font-size: clamp(0.85rem, 1.5vw, 1rem);
     margin-right: 1rem;
     line-height: 1.4;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
+    flex: 1;
   }
   
-  /* ------------------------------
-     Responsive Design - Tablet
-  --------------------------------*/
+
   @media (max-width: 1024px) {
     .creative-lab-container {
       margin: 1.5rem;
@@ -145,13 +175,12 @@ labs.css
     }
     
     .activity-item {
-      padding: 0.6rem 0.8rem;
+      padding: 0.6rem 0.4rem;
+      font-size: clamp(0.75rem, 1.5vw, 0.9rem);
     }
   }
   
-  /* ------------------------------
-     Responsive Design - Small Tablet
-  --------------------------------*/
+
   @media (max-width: 768px) {
     .creative-lab-container {
       flex-direction: column;
@@ -164,6 +193,7 @@ labs.css
     .creative-lab-right {
       width: 100%;
       padding: 1.5rem;
+      box-sizing: border-box; 
     }
     
     .creative-lab-left {
@@ -176,15 +206,24 @@ labs.css
     
     .creative-lab-content {
       gap: 1.25rem;
+      width: 100%;
     }
     
     .activities-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr)); 
       gap: 0.5rem;
+      width: 100%;
     }
     
     .activity-item {
-      padding: 0.5rem 0.75rem;
+      padding: 0.5rem 0.3rem; 
+      font-size: clamp(0.7rem, 1.5vw, 0.85rem);
+      min-height: 40px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      max-width: 100%; 
     }
     
     .equipment-row {
@@ -192,9 +231,7 @@ labs.css
     }
   }
   
-  /* ------------------------------
-     Responsive Design - Mobile Large
-  --------------------------------*/
+
   @media (max-width: 640px) {
     .creative-lab-container {
       margin: 0.75rem;
@@ -204,7 +241,8 @@ labs.css
     
     .creative-lab-left,
     .creative-lab-right {
-      padding: 1.25rem;
+      padding: 1rem; 
+      box-sizing: border-box;
     }
     
     .lab-header h1 {
@@ -216,13 +254,17 @@ labs.css
     }
     
     .activities-grid {
-      grid-template-columns: 1fr;
-      gap: 0.5rem;
+      grid-template-columns: repeat(2, minmax(0, 1fr)); 
+      gap: 0.4rem;
     }
     
     .activity-item {
-      padding: 0.6rem 1rem;
+      padding: 0.4rem 0.2rem; 
       border-radius: 1.5rem;
+      font-size: 0.7rem; 
+      min-height: 35px;
+      line-height: 1.2;
+      max-width: 100%;
     }
     
     .equipment-list {
@@ -235,12 +277,10 @@ labs.css
     
     .equipment-text {
       margin-right: 0.5rem;
+      font-size: 0.8rem;
     }
   }
-  
-  /* ------------------------------
-     Responsive Design - Mobile Small
-  --------------------------------*/
+
   @media (max-width: 480px) {
     .creative-lab-container {
       margin: 0.5rem;
@@ -250,7 +290,7 @@ labs.css
     
     .creative-lab-left,
     .creative-lab-right {
-      padding: 1rem;
+      padding: 0.8rem; 
     }
     
     .creative-lab-left {
@@ -258,36 +298,41 @@ labs.css
     }
     
     .lab-header h1 {
-      font-size: 1.5rem;
+      font-size: 1.3rem; 
     }
     
     .lab-header p {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
     
     .lab-section h2 {
-      font-size: 1.1rem;
+      font-size: 1rem; 
       margin-bottom: 0.5rem;
     }
     
+    .activities-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.3rem; 
+    }
+    
     .activity-item {
-      padding: 0.5rem 0.8rem;
-      font-size: 0.8rem;
+      padding: 0.3rem 0.1rem; 
+      font-size: 0.65rem; 
+      min-height: 32px;
+      border-radius: 1rem; 
     }
     
     .equipment-text {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       margin-right: 0.25rem;
     }
     
     .star {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
     }
   }
   
-  /* ------------------------------
-     Responsive Design - Extra Small Mobile
-  --------------------------------*/
+  
   @media (max-width: 360px) {
     .creative-lab-container {
       margin: 0.25rem;
@@ -296,38 +341,98 @@ labs.css
     
     .creative-lab-left,
     .creative-lab-right {
-      padding: 0.75rem;
+      padding: 0.6rem; 
     }
     
     .creative-lab-left {
-      min-height: 180px;
+      min-height: 150px; 
     }
     
     .lab-header h1 {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
     }
     
     .lab-header p {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
     }
     
+ 
     .activities-grid {
-      gap: 0.25rem;
+      grid-template-columns: 1fr;
+      gap: 0.3rem;
     }
     
     .activity-item {
-      padding: 0.4rem 0.6rem;
-      font-size: 0.75rem;
+      padding: 0.4rem 0.2rem;
+      font-size: 0.7rem;
+      min-height: 35px;
+      max-width: 100%;
     }
     
     .equipment-text {
-      font-size: 0.75rem;
+      font-size: 0.65rem;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .creative-lab-container {
+      margin: 0.1rem;
+      max-width: calc(100% - 0.2rem);
+      border-radius: 0.3rem;
+    }
+    
+    .creative-lab-left,
+    .creative-lab-right {
+      padding: 0.4rem;
+    }
+    
+    .activities-grid {
+      grid-template-columns: 1fr;
+      gap: 0.2rem;
+    }
+    
+    .activity-item {
+      padding: 0.3rem 0.1rem;
+      font-size: 0.6rem;
+      min-height: 30px;
+    }
+    
+    .lab-header h1 {
+      font-size: 1rem;
+    }
+    
+    .lab-header p {
+      font-size: 0.7rem;
+    }
+    
+    .lab-section h2 {
+      font-size: 0.9rem;
     }
   }
   
-  /* ------------------------------
-     High DPI Screens
-  --------------------------------*/
+ 
+  .activity-item {
+   
+    word-break: break-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    
+   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    
+   
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+ 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .creative-lab-container {
       box-shadow: 0 4px 40px rgba(0,0,0,0.08);
@@ -335,66 +440,5 @@ labs.css
     
     .activity-item {
       border-width: 0.5px;
-    }
-  }
-  
-  /* ------------------------------
-     Print Styles
-  --------------------------------*/
-  @media print {
-    .creative-lab-container {
-      box-shadow: none;
-      border: 1px solid #ccc;
-      break-inside: avoid;
-    }
-    
-    .creative-lab-left {
-      background: #f8f8f8 !important;
-    }
-    
-    .creative-lab-right {
-      background: #f0f0f0 !important;
-    }
-    
-    .activity-item {
-      background: white !important;
-      border: 1px solid #ccc !important;
-    }
-  }
-  
-  /* ------------------------------
-     Reduced Motion
-  --------------------------------*/
-  @media (prefers-reduced-motion: reduce) {
-    .activity-item {
-      transition: none;
-    }
-    
-    .activity-item:hover {
-      transform: none;
-    }
-  }
-  
-  /* ------------------------------
-     Dark Mode Support
-  --------------------------------*/
-  @media (prefers-color-scheme: dark) {
-    .creative-lab-container {
-      background: #1a1a1a;
-    }
-    
-    .lab-header h1,
-    .lab-section h2 {
-      color: #d8b4fe;
-    }
-    
-    .lab-header p {
-      color: #c4b5fd;
-    }
-    
-    .activity-item {
-      background: rgba(255, 255, 255, 0.1);
-      color: #e9d5ff;
-      border-color: rgba(255, 255, 255, 0.2);
     }
   }
