@@ -207,6 +207,61 @@ export const datalabs = {
 // ];
 
 
+// export const labsData = [
+//   {
+//     title: "Creative Lab",
+//     subtitle: "Traditional art meets modern creativity",
+//     sections: {
+//       activities: {
+//         title: "Activities & Projects",
+//         items: [
+//           "Drawing & Sketching",
+//           "Clay Modeling",
+//           "Painting & Watercolors",
+//           "Collage & Mixed Media",
+//           "Crafts & Paper Art",
+//           "Textile Arts"
+//         ]
+//       },
+//       equipment: {
+//         title: "Equipment & Tools",
+//         items: [
+//           { left: "Art Supplies", right: "Pottery Wheels" },
+//           { left: "Drawing Tablets", right: "Craft Materials" },
+//           { left: "Easels", right: "" }
+//         ]
+//       }
+//     }
+//   },
+//   {
+//     title: "Digital Lab",
+//     subtitle: "Cutting-edge digital creation space",
+//     sections: {
+//       activities: {
+//         title: "Activities & Projects",
+//         items: [
+//           "Digital Animation",
+//           "UI/UX Design",
+//           "Photography & Editing",
+//           "Game Design",
+//           "Video Production",
+//           "Graphic Design"
+//         ]
+//       },
+//       equipment: {
+//         title: "Equipment & Tools",
+//         items: [
+//           { left: "High-end Computers", right: "Green Screen" },
+//           { left: "Graphics Tablets", right: "Editing Software" },
+//           { left: "Professional Cameras", right: "" }
+//         ]
+//       }
+//     }
+//   }
+// ];
+
+// utils/labData.js
+
 export const labsData = [
   {
     title: "Creative Lab",
@@ -258,4 +313,20 @@ export const labsData = [
       }
     }
   }
+];
+
+export const tools = [
+  { icon: "FaPaintBrush", title: "Canva", desc: "Beginner-friendly design platform" },
+  { icon: "SiFigma", title: "Figma", desc: "Professional UI/UX design tool" },
+  { icon: "SiAdobe", title: "Adobe Creative Suite", desc: "Industry-standard creative software" },
+  { icon: "FaCode", title: "HTML/CSS", desc: "Web development fundamentals" },
+  { icon: "FaCubes", title: "Blender", desc: "3D modeling and animation" },
+  { icon: "FaGamepad", title: "Unity", desc: "For game developments" },
+];
+
+export const benefits = [
+  { title: "Convenient Access", desc: "Students learn in familiar environment during school hours" },
+  { title: "Expert Guidance", desc: "Trained faculty provide personalized instruction and support" },
+  { title: "Collaborative Learning", desc: "Students work together on projects and share creative ideas" },
+  { title: "Portfolio Building", desc: "Continuous project work builds impressive portfolios over time" },
 ];
