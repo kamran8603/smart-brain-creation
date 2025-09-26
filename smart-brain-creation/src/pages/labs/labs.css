@@ -8,28 +8,33 @@
   display: flex;
   justify-content: space-evenly;
   max-width: 1200px;
-  margin: 2rem auto;
+  margin: 3rem auto;
   background: #fff;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  border: 2px solid blue;
+  padding: 3rem;
+  border: 2px soldi red;
 }
 
 .creative-lab-left {
-  width: 35%;
+  width: 40%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f3f4f6;
   overflow: hidden;
+
+
+
 }
 
 .lab-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .creative-lab-right {
@@ -38,6 +43,7 @@
   padding: 2rem;
   display: flex;
   align-items: center;
+
   border-radius: 15px;
 }
 
@@ -46,6 +52,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  justify-content: center;
+ 
+  align-items: center;
+  
 }
 
 .lab-header h1 {
@@ -53,6 +63,7 @@
   font-weight: 700;
   color: #4c1d95;
   margin-bottom: 0.5rem;
+  
 }
 
 .lab-header p {
@@ -65,12 +76,14 @@
   font-weight: 700;
   color: #4c1d95;
   margin-bottom: 0.75rem;
+  
 }
 
 .activities-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
+  
 }
 
 .activity-item {

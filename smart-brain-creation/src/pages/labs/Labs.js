@@ -274,7 +274,9 @@ import { labsData } from '../../utils';
 
 // Simply import your two images
 import creativeLabImage from '../../assets/lab-data.png';
-import digitalLabImage from '../../assets/labs.png';
+import digitalLabImage from '../../assets/lab-image2.png';
+import LabSection from '../../components/LabSection';
+import Footer from '../Footer/Footer';
 
 const Labs = () => {
   return (
@@ -371,6 +373,8 @@ const Labs = () => {
           )}
         </div>
       ))}
+      <LabSection/>
+      <Footer />
     </div>
   );
 };
