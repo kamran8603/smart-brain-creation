@@ -1,42 +1,15 @@
-// import React from 'react';
-// import logo from "../assets/logo.png";
-// import { Link } from 'react-router-dom';
-// import { IoGameControllerOutline } from "react-icons/io5";
-// import "./navbar.css";
-
-// function Navbar() {
-//   return (
-//     <nav className=" navbar">
-//       <img className='logo h-2' src={logo} alt='Logo' />
-
-//       <div className='navbar-btns flex items-center space-x-4 border-2 border-solid border-black'>
-//         <Link to="/">Home</Link>
-//         <Link to="/about">About</Link>
-//         <Link to="/programs">Programs</Link>
-//         <Link to="/labs">Labs</Link>
-//         <Link to="/contact">Contact</Link>
-//         <Link to="/events">Events</Link>
-        
-//         <button className='gameZone flex items-center gap-1 px-2 py-1 bg-blue-600 text-white rounded hover:bg-blue-700'>
-//           <IoGameControllerOutline className='icons' /> Game Zone
-//         </button>
-      
-//       </div>
-//     </nav>
-//   );
-// }
-
-// export default Navbar;
 
 
-import React from 'react';
+import React, { useState } from 'react';
 import logo from "../assets/logo.png";
 import { Link, useLocation } from 'react-router-dom';
 import { IoGameControllerOutline } from "react-icons/io5";
+import { FiMenu, FiX } from "react-icons/fi";
 import "./navbar.css";
 
 function Navbar() {
   const location = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   // Function to check if link is active
   const isActiveLink = (path) => {
@@ -46,21 +19,58 @@ function Navbar() {
     return location.pathname.startsWith(path);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <img className='logo' src={logo} alt='Logo' />
 
-      <div className='navbar-btns'>
-        <Link to="/" className={isActiveLink('/') ? 'active' : ''}>Home</Link>
-        <Link to="/about" className={isActiveLink('/about') ? 'active' : ''}>About Us</Link>
-        <Link to="/programs" className={isActiveLink('/programs') ? 'active' : ''}>Programs</Link>
-        <Link to="/labs" className={isActiveLink('/labs') ? 'active' : ''}>Labs</Link>
-        <Link to="/events" className={isActiveLink('/events') ? 'active' : ''}>Events</Link>
-        <Link to="/contact" className={isActiveLink('/contact') ? 'active' : ''}>Contact Us</Link>
+      {/* Desktop Menu */}
+      <div className='navbar-btns desktop-menu'>
+        <Link to="/" className={isActiveLink('/') ? 'active' : ''} onClick={closeMenu}>Home</Link>
+        <Link to="/about" className={isActiveLink('/about') ? 'active' : ''} onClick={closeMenu}>About Us</Link>
+        <Link to="/programs" className={isActiveLink('/programs') ? 'active' : ''} onClick={closeMenu}>Programs</Link>
+        <Link to="/labs" className={isActiveLink('/labs') ? 'active' : ''} onClick={closeMenu}>Labs</Link>
+        <Link to="/events" className={isActiveLink('/events') ? 'active' : ''} onClick={closeMenu}>Events</Link>
+        <Link to="/contact" className={isActiveLink('/contact') ? 'active' : ''} onClick={closeMenu}>Contact Us</Link>
         
+        <Link to="/gamezone">
         <button className='gameZone'>
           <IoGameControllerOutline className='icons' /> GameZone
         </button>
+        </Link>
+        
+      </div>
+
+      {/* Hamburger Icon for Mobile */}
+      <div className="hamburger" onClick={toggleMenu}>
+        {isMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div className={`mobile-menu-overlay ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}></div>
+
+      {/* Mobile Menu */}
+      <div className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
+        <div className="mobile-menu-content">
+          <Link to="/" className={isActiveLink('/') ? 'active' : ''} onClick={closeMenu}>Home</Link>
+          <Link to="/about" className={isActiveLink('/about') ? 'active' : ''} onClick={closeMenu}>About Us</Link>
+          <Link to="/programs" className={isActiveLink('/programs') ? 'active' : ''} onClick={closeMenu}>Programs</Link>
+          <Link to="/labs" className={isActiveLink('/labs') ? 'active' : ''} onClick={closeMenu}>Labs</Link>
+          <Link to="/events" className={isActiveLink('/events') ? 'active' : ''} onClick={closeMenu}>Events</Link>
+          <Link to="/contact" className={isActiveLink('/contact') ? 'active' : ''} onClick={closeMenu}>Contact Us</Link>
+          
+          <Link to="/gamezone">
+         <button className='gameZone mobile-gameZone'>
+            <IoGameControllerOutline className='icons' /> GameZone
+          </button> </Link>
+        </div>
       </div>
     </nav>
   );

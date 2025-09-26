@@ -7,6 +7,11 @@ import Home from "../pages/Home/Home";
 import Labs from "../pages/labs/Labs";
 import Programs from "../pages/programs/Programs";
 import Approuter from "../Navbar/Approuter";
+import Gameabout from "../game/Gamepages/GameAbout/Gameabout"
+import GameContact from "../game/Gamepages/GameContact/GameContact"
+
+import GameZoneRouter from "../game/Game section Navbar/GameZoneRouter";
+import Gamezone from "../game/Gamepages/GameHome/Gamezone";
 
 export const routes = [
     {
@@ -38,6 +43,27 @@ export const routes = [
                 path:"events",
                 element:<Events/> 
             }
-        ]
-    }
+        ],
+        
+    },
+    {
+        path: "/gamezone",
+        element: <GameZoneRouter/>,   // 🔹 Alag GameZone Layout
+        errorElement: <ErrorPage />,
+        children: [
+          { 
+            index: true, 
+            element: <Gamezone/>
+          },
+          {
+            path : "about",
+            element:<Gameabout/>
+          },
+          {
+            path:"contact",
+            element: <GameContact/>
+          }
+         
+        ],
+      },
 ]

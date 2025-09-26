@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  
 }
 
 .home-head {
@@ -34,9 +35,10 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 54px;
   justify-items: center;
   margin-bottom: 80px;
+ 
 }
 
 .card {
@@ -47,9 +49,11 @@
   width: 100%;
   max-width: 340px;
   display: flex;
+  padding: 1rem;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #f0e6f5;
+
 }
 
 .card:hover {
