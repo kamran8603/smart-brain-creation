@@ -45,10 +45,29 @@
   min-width: 300px;
 }
 
+/* Staggered Image Grid - Key Fix */
 .game-division-img-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
+  align-items: start;
+}
+
+/* Create the staggered/offset effect */
+.game-division-img:nth-child(1) {
+  margin-top: 0;
+}
+
+.game-division-img:nth-child(2) {
+  margin-top: 40px; /* Push second image down */
+}
+
+.game-division-img:nth-child(3) {
+  margin-top: -20px; /* Pull third image up */
+}
+
+.game-division-img:nth-child(4) {
+  margin-top: 20px; /* Push fourth image down slightly */
 }
 
 .game-division-img {
@@ -155,6 +174,11 @@
   
   .game-division-title {
     font-size: 2rem;
+  }
+  
+  /* Reset the staggered effect on mobile for better layout */
+  .game-division-img {
+    margin-top: 0 !important;
   }
   
   .game-division-img-grid {

@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Container */
+.privacy {
+ background: linear-gradient(135deg, #5f117c 0%, #46105e 100%);
+ display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* align everything to the left */
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 60px 10%;
+}
+
+/* Headings */
+.privacy h3 {
+  color: white;
+  font-size: 48px;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.effect {
+  color: white;
+  font-size: 22px;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.privacy h4 {
+  color: white;
+  font-size: 28px;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.sentence {
+  color: white;
+  font-size: 20px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* ---------------- RESPONSIVENESS ---------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .privacy {
+    padding: 40px 40px;
+  }
+  .privacy h3 {
+    font-size: 40px;
+  }
+  .privacy h4 {
+    font-size: 24px;
+  }
+  .sentence {
+    font-size: 18px;
+  }
+  .effect {
+    font-size: 20px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .privacy {
+    padding: 30px 20px;
+  }
+  .privacy h3 {
+    font-size: 32px;
+  }
+  .privacy h4 {
+    font-size: 20px;
+  }
+  .sentence {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .effect {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}

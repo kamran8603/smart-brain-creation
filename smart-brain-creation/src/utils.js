@@ -1,4 +1,3 @@
-// utils/homedata.js
 import homefirst from "./assets/home-compo-1.png";
 import homesecond from "./assets/home-2.png";
 import homethird from "./assets/home3 20.png";

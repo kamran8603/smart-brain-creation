@@ -1,9 +1,10 @@
 import React from 'react'
+import GameDivision from './GameDivision'
 
 function Gamezone() {
   return (
     <div>
-      hello game
+     <GameDivision/>
     </div>
   )
 }

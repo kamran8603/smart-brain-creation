@@ -1,0 +1,320 @@
+.navbar {
+    width: 90%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff6f6;
+    border-radius: 25px;
+    box-shadow: 0 4px 24px rgba(95, 17, 124, 0.08);
+    padding: 0.6rem 2rem;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    height: 3.2rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    z-index: 1001;
+}
+
+/* Desktop Menu */
+.desktop-menu {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-btns > a {
+    text-decoration: none;
+    color: #5f117c;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.3rem 0.8rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    position: relative;
+}
+
+.navbar-btns > a:hover {
+    background: #f3e6fa;
+    color: #46105e;
+}
+
+/* Active link styling */
+.navbar-btns > a.active {
+    font-weight: 700;
+    color: #46105e;
+    background: #f3e6fa;
+}
+
+.navbar-btns > a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: #5f117c;
+    border-radius: 2px;
+}
+
+.gameZone {
+    background: #5f117c;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 2px solid #5f117c;
+    border-radius: 1.2rem;
+    padding: 0.5rem 1.4rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(95, 17, 124, 0.08);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.gameZone:hover {
+    background: #fff;
+    color: #5f117c;
+}
+
+.icons {
+    font-size: 1.3rem;
+}
+
+/* Hamburger Icon - Hidden on Desktop */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    color: #5f117c;
+    z-index: 1001;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 998;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100%;
+    background: #fff6f6;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu-content {
+    padding: 80px 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.mobile-menu-content a {
+    text-decoration: none;
+    color: #5f117c;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.mobile-menu-content a.active {
+    font-weight: 700;
+    color: #46105e;
+    background: #f3e6fa;
+    border-left: 3px solid #5f117c;
+}
+
+.mobile-menu-content a:hover {
+    background: #f3e6fa;
+    color: #46105e;
+}
+
+.mobile-gameZone {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .navbar {
+        width: 92%;
+        padding: 0.6rem 1.5rem;
+        border-radius: 20px;
+    }
+    
+    .desktop-menu {
+        gap: 1rem;
+    }
+    
+    .navbar-btns > a {
+        font-size: 0.95rem;
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .gameZone {
+        padding: 0.4rem 1.2rem;
+        font-size: 0.95rem;
+    }
+    
+    .logo {
+        height: 2.8rem;
+    }
+}
+
+/* Small Tablet - Show Hamburger */
+@media (max-width: 868px) {
+    .desktop-menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .navbar {
+        width: 94%;
+        padding: 1rem 1.5rem;
+        border-radius: 20px;
+        min-height: 60px;
+    }
+    
+    .logo {
+        height: 2.5rem;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 640px) {
+    .navbar {
+        width: 96%;
+        padding: 0.8rem 1rem;
+        border-radius: 15px;
+        min-height: 55px;
+    }
+    
+    .mobile-menu {
+        width: 85%;
+    }
+    
+    .mobile-menu-content {
+        padding: 70px 1.5rem 1.5rem;
+        gap: 1rem;
+    }
+    
+    .mobile-menu-content a {
+        font-size: 1rem;
+        padding: 0.7rem 0.8rem;
+    }
+    
+    .logo {
+        height: 2.2rem;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .navbar {
+        width: 98%;
+        padding: 0.6rem 0.8rem;
+        min-height: 50px;
+    }
+    
+    .mobile-menu {
+        width: 90%;
+        max-width: 280px;
+    }
+    
+    .mobile-menu-content {
+        padding: 60px 1rem 1rem;
+        gap: 0.8rem;
+    }
+    
+    .mobile-menu-content a {
+        font-size: 0.95rem;
+        padding: 0.6rem 0.7rem;
+    }
+    
+    .mobile-gameZone {
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .logo {
+        height: 2rem;
+    }
+    
+    .hamburger {
+        transform: scale(0.9);
+    }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+    .navbar {
+        padding: 0.5rem 0.6rem;
+        min-height: 45px;
+    }
+    
+    .mobile-menu-content {
+        padding: 50px 0.8rem 0.8rem;
+    }
+    
+    .mobile-menu-content a {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.6rem;
+    }
+    
+    .logo {
+        height: 1.8rem;
+    }
+    
+    .hamburger {
+        transform: scale(0.8);
+    }
+}

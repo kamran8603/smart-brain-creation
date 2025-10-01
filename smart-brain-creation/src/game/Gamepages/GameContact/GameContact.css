@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contact {
+  background: linear-gradient(135deg, #5f117c 0%, #46105e 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact Info Boxes */
+.contact1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.contact1 .box .phone
+{
+  height: 80px;
+  width: 50px;
+  color: #ffffff;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(
+    ellipse 72.36% 72.36% at 50.00% 27.64%,
+    rgba(245, 219, 255, 0.27) 72%,
+    rgba(232, 174, 255, 0.27) 100%
+  );
+  border: 1px #5f117c solid;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  min-height: 200px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+}
+
+.phone {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 12px;
+}
+
+.p1 {
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+}
+
+.p2,
+.p3 {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.p2 {
+  text-decoration: underline;
+}
+
+/* Form Section Heading */
+.formout h3 {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+}
+
+.formout p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+  font-size: 18px;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+}
+
+/* Form */
+.form {
+  width: 100%;
+  max-width: 850px;
+  margin: 20px auto 60px auto;
+  padding: 30px 20px;
+  border-radius: 15px;
+  background: radial-gradient(
+    ellipse 72.36% 72.36% at 50.00% 27.64%,
+    rgba(245, 219, 255, 0.27) 72%,
+    rgba(232, 174, 255, 0.27) 100%
+  );
+  border: 1px #5f117c solid;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  min-width: 250px;
+}
+
+.form-group label {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: Poppins, sans-serif;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #7a0fa3;
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: #5f117c;
+  color: #fff;
+  font-size: 18px;
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 5px 5px 20px rgba(246, 249, 249, 0.9);
+}
+
+.submit-btn:hover {
+  background: #7a0fa3;
+}
+
+/* Status Message */
+.status-msg {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #7a0fa3;
+}
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .p1 {
+    font-size: 24px;
+  }
+  .p2,
+  .p3 {
+    font-size: 14px;
+  }
+  .formout h3 {
+    font-size: 28px;
+  }
+  .formout p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .contact1 {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .form {
+    padding: 20px 15px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .form-group {
+    min-width: 100%;
+  }
+
+  .p1 {
+    font-size: 22px;
+  }
+
+  .p2,
+  .p3 {
+    font-size: 14px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
+}

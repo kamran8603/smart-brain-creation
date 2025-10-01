@@ -12,6 +12,8 @@ import GameContact from "../game/Gamepages/GameContact/GameContact"
 
 import GameZoneRouter from "../game/Game section Navbar/GameZoneRouter";
 import Gamezone from "../game/Gamepages/GameHome/Gamezone";
+import Game from "../game/Gamepages/Games/Game";
+import Terms from "../game/Gamepages/Terms.js/Terms";
 
 export const routes = [
     {
@@ -62,6 +64,10 @@ export const routes = [
           {
             path:"contact",
             element: <GameContact/>
+          },
+          {
+            path:"terms",
+            element:<Terms/>
           }
          
         ],

@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.terms {
+  background: radial-gradient(
+    ellipse 80% 108.18% at 50% 80%,
+    rgb(16, 14, 14) 0%,
+    rgba(18, 2, 23, 0.9) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* left-align */
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 60px 10%; 
+}
+
+.terms h3,
+.terms h4,
+.terms h5,
+.terms h6,
+.terms p,
+.terms ul li {
+  text-align: left; /* force left align */
+  color: white;
+  font-family: Poppins, sans-serif;
+  line-height: 1.6;
+  word-wrap: break-word;
+  margin-bottom: 18px;
+}
+
+/* Font sizes for desktop */
+.terms h3 { font-size: 42px; font-weight: 700; }
+.effect { font-size: 26px; font-weight: 600; }
+.terms h4 { font-size: 28px; font-weight: 700; }
+.terms h5 { font-size: 24px; font-weight: 700; }
+.terms h6 { font-size: 20px; font-weight: 700; }
+.sentence { font-size: 20px; font-weight: 400; }
+.terms ul li { font-size: 18px; font-weight: 400; }
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .terms {
+    padding: 40px 8%;
+  }
+  .terms h3 { font-size: 36px; }
+  .effect { font-size: 22px; }
+  .sentence, .terms ul li { font-size: 18px; }
+}
+
+@media (max-width: 768px) {
+  .terms {
+    padding: 30px 6%;
+  }
+  .terms h3 { font-size: 30px; }
+  .effect { font-size: 20px; }
+  .terms h4 { font-size: 22px; }
+  .terms h5 { font-size: 20px; }
+  .terms h6 { font-size: 18px; }
+  .sentence, .terms ul li { font-size: 16px; }
+}
+
+@media (max-width: 480px) {
+  .terms {
+    padding: 20px 5%;
+  }
+  .terms h3 { font-size: 26px; }
+  .effect { font-size: 18px; }
+  .terms h4 { font-size: 20px; }
+  .terms h5 { font-size: 18px; }
+  .terms h6 { font-size: 16px; }
+  .sentence, .terms ul li { font-size: 14px; }
+}
