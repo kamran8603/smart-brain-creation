@@ -29,7 +29,7 @@ function Navbar() {
 
   return (
     <nav className="navbar">
-      <img className='logo' src={logo} alt='Logo' />
+     <Link to="/"> <img className='logo' src={logo} alt='Logo' /></Link>
 
       {/* Desktop Menu */}
       <div className='navbar-btns desktop-menu'>
@@ -37,7 +37,7 @@ function Navbar() {
         <Link to="/about" className={isActiveLink('/about') ? 'active' : ''} onClick={closeMenu}>About Us</Link>
         <Link to="/programs" className={isActiveLink('/programs') ? 'active' : ''} onClick={closeMenu}>Programs</Link>
         <Link to="/labs" className={isActiveLink('/labs') ? 'active' : ''} onClick={closeMenu}>Labs</Link>
-        <Link to="/events" className={isActiveLink('/events') ? 'active' : ''} onClick={closeMenu}>Events</Link>
+        {/* <Link to="/events" className={isActiveLink('/events') ? 'active' : ''} onClick={closeMenu}>Events</Link> */}
         <Link to="/contact" className={isActiveLink('/contact') ? 'active' : ''} onClick={closeMenu}>Contact Us</Link>
         
         <Link to="/gamezone">
@@ -63,7 +63,7 @@ function Navbar() {
           <Link to="/about" className={isActiveLink('/about') ? 'active' : ''} onClick={closeMenu}>About Us</Link>
           <Link to="/programs" className={isActiveLink('/programs') ? 'active' : ''} onClick={closeMenu}>Programs</Link>
           <Link to="/labs" className={isActiveLink('/labs') ? 'active' : ''} onClick={closeMenu}>Labs</Link>
-          <Link to="/events" className={isActiveLink('/events') ? 'active' : ''} onClick={closeMenu}>Events</Link>
+          {/* <Link to="/events" className={isActiveLink('/events') ? 'active' : ''} onClick={closeMenu}>Events</Link> */}
           <Link to="/contact" className={isActiveLink('/contact') ? 'active' : ''} onClick={closeMenu}>Contact Us</Link>
           
           <Link to="/gamezone">

@@ -5,17 +5,14 @@
 }
 
 .terms {
-  background: radial-gradient(
-    ellipse 80% 108.18% at 50% 80%,
-    rgb(16, 14, 14) 0%,
-    rgba(18, 2, 23, 0.9) 100%
-  );
+  background-color: #501069;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;   /* left-align */
+  align-items: flex-start;  
   justify-content: flex-start;
   min-height: 100vh;
   padding: 60px 10%; 
+
 }
 
 .terms h3,
@@ -24,7 +21,7 @@
 .terms h6,
 .terms p,
 .terms ul li {
-  text-align: left; /* force left align */
+  text-align: left; 
   color: white;
   font-family: Poppins, sans-serif;
   line-height: 1.6;
@@ -32,7 +29,7 @@
   margin-bottom: 18px;
 }
 
-/* Font sizes for desktop */
+
 .terms h3 { font-size: 42px; font-weight: 700; }
 .effect { font-size: 26px; font-weight: 600; }
 .terms h4 { font-size: 28px; font-weight: 700; }
@@ -41,7 +38,7 @@
 .sentence { font-size: 20px; font-weight: 400; }
 .terms ul li { font-size: 18px; font-weight: 400; }
 
-/* ✅ Responsive Design */
+
 @media (max-width: 1024px) {
   .terms {
     padding: 40px 8%;

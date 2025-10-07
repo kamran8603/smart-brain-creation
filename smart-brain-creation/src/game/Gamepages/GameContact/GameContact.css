@@ -5,7 +5,7 @@
 }
 
 .contact {
-  background: linear-gradient(135deg, #5f117c 0%, #46105e 100%);
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +39,7 @@
     rgba(245, 219, 255, 0.27) 72%,
     rgba(232, 174, 255, 0.27) 100%
   );
-  border: 1px #5f117c solid;
+  
   border-radius: 15px;
   text-align: center;
   padding: 20px;
@@ -111,7 +111,7 @@
     rgba(245, 219, 255, 0.27) 72%,
     rgba(232, 174, 255, 0.27) 100%
   );
-  border: 1px #5f117c solid;
+  /* border: 1px #5f117c solid; */
 }
 
 .form-row {

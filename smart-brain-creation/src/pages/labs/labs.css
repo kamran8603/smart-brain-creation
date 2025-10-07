@@ -1,9 +1,10 @@
-/* Combined Labs Component Styles */
+/* ======================== Combined Labs Component Styles ======================== */
 .mylab-wrapper {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 4rem auto;
   padding: 3rem 1rem;
   text-align: center;
+ 
 }
 
 .mylab-heading {
@@ -11,6 +12,7 @@
   font-weight: 700;
   color: #5F117C;
   margin-bottom: 0.5rem;
+  
 }
 
 .mylab-subheading {
@@ -103,74 +105,88 @@
   min-height: 100vh;
 }
 
+/* ======================== Creative Lab Section ======================== */
 .creative-lab-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
   max-width: 1200px;
   margin: 3rem auto;
   background: #fff;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  padding: 3rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  gap: 2rem;
+}
+
+.creative-lab-left,
+.creative-lab-right {
+  flex: 1 1 45%; /* allows flexible width with min 45% */
+  min-width: 300px; /* prevents shrinking too much on mobile */
 }
 
 .creative-lab-left {
-  width: 40%;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #f3f4f6;
+  padding: 1rem;
 }
 
 .lab-image {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
+  border-radius: 0.5rem;
 }
 
 .creative-lab-right {
-  width: 45%;
   background: linear-gradient(to bottom right, #e9d5ff, #d8b4fe, #a78bfa);
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
-  align-items: center;
-  border-radius: 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 1rem;
+  box-sizing: border-box;
 }
 
 .creative-lab-content {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
+  gap: 1rem;
 }
 
 .lab-header h1 {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 5vw, 2rem);
   font-weight: 700;
   color: #4c1d95;
   margin-bottom: 0.5rem;
+  word-break: break-word;
 }
 
 .lab-header p {
-  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #6b21a8;
+  line-height: 1.5;
 }
 
 .lab-section h2 {
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   font-weight: 700;
   color: #4c1d95;
   margin-bottom: 0.75rem;
+  word-break: break-word;
 }
 
+/* Activities Grid */
 .activities-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* adjusts automatically */
   gap: 0.75rem;
 }
 
@@ -179,12 +195,13 @@
   color: #5b21b6;
   padding: 0.75rem 0.5rem;
   border-radius: 2rem;
-  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
   font-weight: 500;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+/* Equipment List */
 .equipment-list {
   display: flex;
   flex-direction: column;
@@ -206,7 +223,7 @@
   font-weight: 500;
 }
 
-/* Responsive Design */
+/* ======================== Responsive Design ======================== */
 @media (max-width: 768px) {
   .mylab-tools-container {
     grid-template-columns: 1fr;
@@ -223,10 +240,55 @@
 
   .creative-lab-container {
     flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
-  
+
   .creative-lab-left,
   .creative-lab-right {
-    width: 100%;
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .lab-header h1 {
+    font-size: clamp(1.5rem, 6vw, 1.75rem);
+    text-align: center;
+  }
+
+  .lab-header p {
+    font-size: clamp(0.95rem, 4vw, 1.1rem);
+    text-align: center;
+  }
+
+  .lab-section h2 {
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
+    text-align: center;
+  }
+
+  .activities-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .activity-item {
+    font-size: clamp(0.75rem, 3vw, 0.9rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .activities-grid {
+    grid-template-columns: 1fr; /* single column on mobile */
+    gap: 0.5rem;
+  }
+
+  .lab-header h1 {
+    font-size: clamp(1.25rem, 5vw, 1.5rem);
+  }
+
+  .lab-header p {
+    font-size: clamp(0.9rem, 4vw, 1rem);
+  }
+
+  .lab-section h2 {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
   }
 }

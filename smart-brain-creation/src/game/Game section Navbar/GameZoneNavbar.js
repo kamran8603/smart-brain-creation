@@ -32,7 +32,9 @@ function GameZoneNavbar() {
 
   return (
     <nav className="navbar">
-      <img className='logo' src={logo} alt='Logo' />
+      {/* <img className='logo' src={logo} alt='Logo' /> */}
+           <Link to="/"> <img className='logo' src={logo} alt='Logo' /></Link>
+      
 
       {/* Desktop Menu */}
       <div className='navbar-btns desktop-menu'>
@@ -63,8 +65,8 @@ function GameZoneNavbar() {
         <div className="mobile-menu-content">
           <Link to="/gamezone" className={isActiveLink('/gamezone') ? 'active' : ''} onClick={closeMenu}>Home</Link>
           <Link to="/gamezone/about" className={isActiveLink('/gamezone/about') ? 'active' : ''} onClick={closeMenu}>About Us</Link>
-          <Link to="/gamezone/contact" className={isActiveLink('/gamezone/contact') ? 'active' : ''} onClick={closeMenu}>Programs</Link>
-          <Link to="/gamezone/terms" className={isActiveLink('/gamezone/games') ? 'active' : ''} onClick={closeMenu}>Terms</Link>
+          <Link to="/gamezone/contact" className={isActiveLink('/gamezone/contact') ? 'active' : ''} onClick={closeMenu}>Contact</Link>
+          <Link to="/gamezone/terms" className={isActiveLink('/gamezone/terms') ? 'active' : ''} onClick={closeMenu}>Terms</Link>
           
           <Link to="/gamezone">
          <button className='gameZone mobile-gameZone'>

@@ -1,9 +1,20 @@
-/* Container Styles */
+/* ==============================
+   Global Resets
+============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   Container
+============================== */
 .learning-paths-container {
-  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   background-color: #f8fafc;
- 
+
  
 }
 
@@ -12,9 +23,11 @@
   margin: 0 auto;
 }
 
-/* Header Section */
+/* ==============================
+   Header Section
+============================== */
 .header-section {
-  text-align: center;
+  text-align: justify;
   margin-bottom: 60px;
 }
 
@@ -34,40 +47,46 @@
   line-height: 1.6;
 }
 
-/* Foundation Card Styles */
+/* ==============================
+   Foundation Card
+============================== */
 .foundation-card {
-  max-width: 80%;
-  width: 90%;
+  max-width: 100%;
   margin: 0 auto 24px auto;
   background: linear-gradient(135deg, #e9d5ff 0%, #f3e8ff 50%, #faf5ff 100%);
   border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: clamp(20px, 4vw, 32px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+              0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
-  overflow: hidden;
- 
+  overflow: visible; /* ✅ fix for mobile visibility */
   color: #5f117c;
+
 }
 
 .foundation-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+              0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+/* ==============================
+   Card Layout
+============================== */
 .card-contents {
   display: flex;
   align-items: flex-start;
-  flex-direction: row;
   justify-content: space-between;
   gap: 40px;
- 
+  flex-wrap: wrap; /* ✅ ensures mobile wrapping */
 }
 
-/* Left Side Styles */
+/* ==============================
+   Left Side
+============================== */
 .card-left {
   flex: 1;
-
 }
 
 .card-header {
@@ -78,7 +97,6 @@
 }
 
 .graduation-icon {
-    
   font-size: 2rem;
   width: 48px;
   height: 48px;
@@ -92,11 +110,9 @@
 
 .header-text {
   flex: 1;
-  
 }
 
 .card-title {
-    
   font-size: 1.5rem;
   font-weight: 700;
   color: #374151;
@@ -105,8 +121,8 @@
 }
 
 .age-range {
-    border: none;
-    border-radius: 5px;
+  border: none;
+  border-radius: 5px;
   font-size: 0.875rem;
   color: #6b7280;
   font-weight: 500;
@@ -115,23 +131,20 @@
 }
 
 .card-description {
-  
-    color: #5f117c;
+  color: #5f117c;
   font-size: 1rem;
-
   margin-bottom: 32px;
   line-height: 1.6;
- 
 }
 
-/* Features Grid */
+/* ==============================
+   Features Grid
+============================== */
 .features-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 24px;
-
   color: #5E5B5B;
-  
 }
 
 .feature-item {
@@ -139,13 +152,11 @@
   align-items: center;
   gap: 12px;
   color: #4b5563;
-
 }
 
 .feature-icon {
   width: 20px;
   height: 20px;
-
   color: #A173B2;
   border-radius: 50%;
   display: flex;
@@ -158,14 +169,14 @@
 
 .feature-text {
   font-size: 0.85rem;
-
   line-height: 1.5;
-
   font-weight: 300;
   color: #4b5563;
 }
 
-/* Right Side Styles */
+/* ==============================
+   Right Side
+============================== */
 .card-right {
   display: flex;
   flex-direction: column;
@@ -173,7 +184,6 @@
   gap: 16px;
   min-width: 180px;
   color: #5f117c;
- 
 }
 
 .calendar-icon {
@@ -181,7 +191,6 @@
   height: 124px;
   background-color: #A43CC2;
   border-radius: 50%;
- 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -192,193 +201,32 @@
 
 .projects-info {
   text-align: center;
-  
   font-weight: 300;
-}
-
-.projects-number {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #374151;
-  line-height: 1.2;
-  margin-bottom: 4px;
- 
 }
 
 .projects-description {
   font-size: 0.875rem;
-  color: #6b7280;
-  line-height: 1.4;
-
   color: #A43CC2;
   font-weight: 400;
 }
 
-/* Responsive Design */
+/* ==============================
+   Responsive Design
+============================== */
 
-/* Extra Large Devices (1400px and up) */
-@media (min-width: 1400px) {
-  .conatiner-section {
-    max-width: 1400px;
-  }
-
-  .main-title {
-    font-size: 3rem;
-  }
-
-  .subtitle {
-    font-size: 1.25rem;
-  }
-
-  .foundation-card {
-    padding: 40px;
-  }
-
-  .card-title {
-    font-size: 1.75rem;
-  }
-
-  .card-description {
-    font-size: 1.25rem;
-  }
-
-  .feature-text {
-    font-size: 1.1rem;
-  }
-
-  .projects-number {
-    font-size: 2rem;
-  }
-
-  .calendar-icon {
-    width: 72px;
-    height: 72px;
-    font-size: 2rem;
-  }
-}
-
-/* Large Devices (1200px and up) */
-@media (min-width: 1200px) and (max-width: 1399px) {
-  .conatiner-section {
-    max-width: 1200px;
-  }
-
-  .foundation-card {
-    padding: 36px;
-  }
-
-  .card-content {
-    gap: 48px;
-  }
-}
-
-/* Medium Large Devices (992px to 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  .conatiner-section {
-    max-width: 960px;
-  }
-
-  .learning-paths-container {
-    padding: 32px 24px;
-  }
-
-  .foundation-card {
-    padding: 32px;
-  }
-
-  .card-content {
-    gap: 40px;
-  }
-
-  .main-title {
-    font-size: 2.25rem;
-  }
-
-  .card-right {
-    min-width: 160px;
-  }
-}
-
-/* Medium Devices (768px to 991px) - Tablets */
-@media (min-width: 768px) and (max-width: 991px) {
-  .conatiner-section {
-    max-width: 720px;
-  }
-
-  .learning-paths-container {
-    padding: 32px 20px;
-  }
-
+/* Tablets */
+@media (max-width: 991px) {
   .foundation-card {
     padding: 28px;
   }
 
-  .card-content {
-    gap: 32px;
-  }
-
-  .main-title {
-    font-size: 2.25rem;
-  }
-
-  .subtitle {
-    font-size: 1.1rem;
-  }
-
-  .card-title {
-    font-size: 1.4rem;
-  }
-
-  .card-description {
-    font-size: 1.1rem;
-  }
-
-  .features-grid {
-    gap: 14px 20px;
-  }
-
-  .card-right {
-    min-width: 150px;
-  }
-
-  .calendar-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.6rem;
-  }
-
-  .projects-number {
-    font-size: 1.6rem;
-  }
-}
-
-/* Small Medium Devices (640px to 767px) - Small Tablets */
-@media (min-width: 640px) and (max-width: 767px) {
-  .learning-paths-container {
-    padding: 28px 18px;
-  }
-
-  .main-title {
-    font-size: 2rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
-  .foundation-card {
-    padding: 26px;
-    margin-bottom: 22px;
-  }
-
-  .card-content {
+  .card-contents {
     flex-direction: column;
     gap: 28px;
   }
 
   .card-right {
     align-self: center;
-    min-width: auto;
   }
 
   .features-grid {
@@ -386,163 +234,58 @@
     gap: 14px 18px;
   }
 
-  .card-header {
-    gap: 14px;
-  }
-
-  .graduation-icon {
-    font-size: 1.6rem;
-    width: 44px;
-    height: 44px;
-  }
-
-  .card-title {
-    font-size: 1.35rem;
-  }
-
-  .card-description {
-    font-size: 1.05rem;
-    margin-bottom: 26px;
-  }
-
-  .feature-text {
-    font-size: 0.9rem;
-  }
-
   .calendar-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.6rem;
-  }
-
-  .projects-number {
+    width: 80px;
+    height: 80px;
     font-size: 1.6rem;
   }
 }
 
-/* Mobile Devices (480px to 639px) - Large Mobile */
-@media (min-width: 480px) and (max-width: 639px) {
-  .learning-paths-container {
-    padding: 24px 16px;
-  }
-
-  .main-title {
-    font-size: 1.875rem;
-  }
-
-  .subtitle {
-    font-size: 1rem;
-  }
-
+/* Small Tablets / Large Mobiles */
+@media (max-width: 767px) {
   .foundation-card {
     padding: 24px;
-    margin-bottom: 20px;
-  }
-
-  .card-content {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .card-right {
-    align-self: center;
-    min-width: auto;
   }
 
   .features-grid {
     grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .card-header {
-    gap: 12px;
-  }
-
-  .graduation-icon {
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
   }
 
   .card-title {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
   }
 
   .card-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
     margin-bottom: 24px;
   }
 
-  .feature-text {
-    font-size: 0.9rem;
-  }
-
   .calendar-icon {
-    width: 56px;
-    height: 56px;
+    width: 64px;
+    height: 64px;
     font-size: 1.5rem;
-  }
-
-  .projects-number {
-    font-size: 1.5rem;
-  }
-
-  .projects-description {
-    font-size: 0.825rem;
   }
 }
 
-/* Small Mobile Devices (360px to 479px) */
-@media (min-width: 360px) and (max-width: 479px) {
-  .learning-paths-container {
-    padding: 20px 14px;
-  }
-
-  .header-section {
-    margin-bottom: 40px;
-  }
-
-  .main-title {
-    font-size: 1.75rem;
-  }
-
-  .subtitle {
-    font-size: 0.95rem;
-  }
-
+/* Mobiles */
+@media (max-width: 480px) {
   .foundation-card {
     padding: 20px;
-    margin-bottom: 18px;
     border-radius: 16px;
   }
 
-  .card-content {
-    flex-direction: column;
+  .card-contents {
     gap: 20px;
-  }
-
-  .card-header {
-    gap: 10px;
   }
 
   .graduation-icon {
     font-size: 1.4rem;
     width: 36px;
     height: 36px;
-    border-radius: 10px;
   }
 
   .card-title {
     font-size: 1.15rem;
-  }
-
-  .age-range {
-    font-size: 0.8rem;
-  }
-
-  .card-description {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
   }
 
   .features-grid {
@@ -556,18 +299,9 @@
     font-size: 11px;
   }
 
-  .feature-text {
-    font-size: 0.85rem;
-  }
-
   .calendar-icon {
-    width: 52px;
-    height: 52px;
-    font-size: 1.4rem;
-    border-radius: 14px;
-  }
-
-  .projects-number {
+    width: 56px;
+    height: 56px;
     font-size: 1.4rem;
   }
 
@@ -576,151 +310,24 @@
   }
 }
 
-/* Extra Small Mobile Devices (320px to 359px) */
+/* Extra Small Mobiles */
 @media (max-width: 359px) {
-  .learning-paths-container {
-    padding: 18px 12px;
-  }
-
-  .header-section {
-    margin-bottom: 32px;
-  }
-
-  .main-title {
-    font-size: 1.5rem;
-    line-height: 1.3;
-  }
-
-  .subtitle {
-    font-size: 0.9rem;
-  }
-
   .foundation-card {
-    padding: 18px;
-    margin-bottom: 16px;
+    padding: 16px;
     border-radius: 14px;
   }
 
-  .card-content {
-    flex-direction: column;
-    gap: 18px;
-  }
-
-  .card-header {
-    gap: 8px;
-  }
-
-  .graduation-icon {
-    font-size: 1.3rem;
-    width: 34px;
-    height: 34px;
-    border-radius: 8px;
-  }
-
   .card-title {
-    font-size: 1.1rem;
-  }
-
-  .age-range {
-    font-size: 0.75rem;
-  }
-
-  .card-description {
-    font-size: 0.9rem;
-    margin-bottom: 18px;
-  }
-
-  .features-grid {
-    grid-template-columns: 1fr;
-    gap: 8px;
-  }
-
-  .feature-item {
-    gap: 8px;
-  }
-
-  .feature-icon {
-    width: 16px;
-    height: 16px;
-    font-size: 10px;
+    font-size: 1rem;
   }
 
   .feature-text {
     font-size: 0.8rem;
-    line-height: 1.4;
   }
 
   .calendar-icon {
     width: 48px;
     height: 48px;
-    font-size: 1.3rem;
-    border-radius: 12px;
-  }
-
-  .projects-number {
-    font-size: 1.3rem;
-  }
-
-  .projects-description {
-    font-size: 0.75rem;
-  }
-}
-
-/* Ultra Wide Screens (1600px and up) */
-@media (min-width: 1600px) {
-  .conatiner-section {
-    max-width: 1600px;
-  }
-
-  .learning-paths-container {
-    padding: 60px 40px;
-  }
-
-  .header-section {
-    margin-bottom: 80px;
-  }
-
-  .foundation-card {
-    padding: 48px;
-    margin-bottom: 32px;
-  }
-
-  .card-content {
-    gap: 60px;
-  }
-
-  .main-title {
-    font-size: 3.5rem;
-  }
-
-  .subtitle {
-    font-size: 1.375rem;
-  }
-
-  .card-title {
-    font-size: 2rem;
-  }
-
-  .card-description {
-    font-size: 1.375rem;
-    margin-bottom: 40px;
-  }
-
-  .feature-text {
-    font-size: 1.125rem;
-  }
-
-  .calendar-icon {
-    width: 80px;
-    height: 80px;
-    font-size: 2.25rem;
-  }
-
-  .projects-number {
-    font-size: 2.25rem;
-  }
-
-  .projects-description {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }

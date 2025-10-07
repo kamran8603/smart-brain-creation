@@ -1,79 +1,39 @@
-// import React from "react";
-// import "./contact.css";
-
-// const Contact = () => {
-//   return (
-//     <div className="form-container">
-//       <form className="contact-form">
-//         <div className="form-row">
-//           <div className="form-group">
-//             <label>First Name*</label>
-//             <input type="text" placeholder="Enter your First Name" />
-//           </div>
-//           <div className="form-group">
-//             <label>Last Name*</label>
-//             <input type="text" placeholder="Enter your Last Name" />
-//           </div>
-//         </div>
-
-//         <div className="form-group full-width">
-//           <label>Email Address*</label>
-//           <input type="email" placeholder="Enter your Email Address" />
-//         </div>
-
-//         <div className="form-group full-width">
-//           <label>Phone Number*</label>
-//           <input type="text" placeholder="Enter Phone number" />
-//         </div>
-
-//         <div className="form-group full-width">
-//           <label>School Name*</label>
-//           <input type="text" placeholder="Enter your school name" />
-//         </div>
-
-//         <div className="form-group full-width">
-//           <label>Your Role*</label>
-//           <select>
-//             <option value="">Select your role</option>
-//             <option value="teacher">Teacher</option>
-//             <option value="principal">Principal</option>
-//             <option value="student">Student</option>
-//           </select>
-//         </div>
-
-//         <div className="form-group full-width">
-//           <label>Area of interest*</label>
-//           <select>
-//             <option value="">Select your primary interest</option>
-//             <option value="science">Science</option>
-//             <option value="math">Math</option>
-//             <option value="art">Art</option>
-//           </select>
-//         </div>
-
-//         <div className="form-group full-width">
-//           <label>Message*</label>
-//           <textarea placeholder="Tell us about your requirements, questions, or how we can help your school..." />
-//         </div>
-
-//         <button type="submit" className="submit-btn">
-//           Send message
-//         </button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default Contact;
-
-
-import React from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./contact.css";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import Footer from "../Footer/Footer";
 
 const Contact = () => {
+  const form = useRef();
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "YOUR_SERVICE_ID", // replace with your EmailJS service ID
+        "YOUR_TEMPLATE_ID", // replace with your EmailJS template ID
+        form.current,
+        "YOUR_PUBLIC_KEY" // replace with your EmailJS public key
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSubmitted(true); // show success message
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Oops! Something went wrong. Please try again.");
+        }
+      );
+  };
+
   return (
+    <div>
+
+    
     <div className="contact-section">
       {/* Info Cards */}
       <div className="info-cards">
@@ -106,62 +66,76 @@ const Contact = () => {
       </div>
 
       {/* Contact Form */}
-      <form className="contact-form">
-        <div className="form-row">
-          <div className="form-group">
-            <label>First Name*</label>
-            <input type="text" placeholder="Enter your First Name" />
+      {!isSubmitted ? (
+        <form ref={form} className="contact-form" onSubmit={sendEmail}>
+          <div className="form-row">
+            <div className="form-group">
+              <label>First Name*</label>
+              <input type="text" name="firstName" placeholder="Enter your First Name" required />
+            </div>
+            <div className="form-group">
+              <label>Last Name*</label>
+              <input type="text" name="lastName" placeholder="Enter your Last Name" required />
+            </div>
           </div>
-          <div className="form-group">
-            <label>Last Name*</label>
-            <input type="text" placeholder="Enter your Last Name" />
+
+          <div className="form-group full-width">
+            <label>Email Address*</label>
+            <input type="email" name="email" placeholder="Enter your Email Address" required />
           </div>
-        </div>
 
-        <div className="form-group full-width">
-          <label>Email Address*</label>
-          <input type="email" placeholder="Enter your Email Address" />
-        </div>
+          <div className="form-group full-width">
+            <label>Phone Number*</label>
+            <input type="text" name="phone" placeholder="Enter Phone number" required />
+          </div>
 
-        <div className="form-group full-width">
-          <label>Phone Number*</label>
-          <input type="text" placeholder="Enter Phone number" />
-        </div>
+          <div className="form-group full-width">
+            <label>School Name*</label>
+            <input type="text" name="schoolName" placeholder="Enter your school name" required />
+          </div>
 
-        <div className="form-group full-width">
-          <label>School Name*</label>
-          <input type="text" placeholder="Enter your school name" />
-        </div>
+          <div className="form-group full-width">
+            <label>Your Role*</label>
+            <select name="role" required>
+              <option value="">Select your role</option>
+              <option value="teacher">Teacher</option>
+              <option value="principal">Principal</option>
+              <option value="student">Student</option>
+            </select>
+          </div>
 
-        <div className="form-group full-width">
-          <label>Your Role*</label>
-          <select>
-            <option value="">Select your role</option>
-            <option value="teacher">Teacher</option>
-            <option value="principal">Principal</option>
-            <option value="student">Student</option>
-          </select>
-        </div>
+          <div className="form-group full-width">
+            <label>Area of interest*</label>
+            <select name="interest" required>
+              <option value="">Select your primary interest</option>
+              <option value="science">Science</option>
+              <option value="math">Math</option>
+              <option value="art">Art</option>
+            </select>
+          </div>
 
-        <div className="form-group full-width">
-          <label>Area of interest*</label>
-          <select>
-            <option value="">Select your primary interest</option>
-            <option value="science">Science</option>
-            <option value="math">Math</option>
-            <option value="art">Art</option>
-          </select>
-        </div>
+          <div className="form-group full-width">
+            <label>Message*</label>
+            <textarea
+              name="message"
+              placeholder="Tell us about your requirements, questions, or how we can help your school..."
+              required
+            />
+          </div>
 
-        <div className="form-group full-width">
-          <label>Message*</label>
-          <textarea placeholder="Tell us about your requirements, questions, or how we can help your school..." />
+          <button type="submit" className="submit-btn">
+            Send message
+          </button>
+        </form>
+      ) : (
+        <div className="success-message">
+          <h2>🎉 Thanks!</h2>
+          <p>Your message has been sent successfully.</p>
         </div>
+      )}
 
-        <button type="submit" className="submit-btn">
-          Send message
-        </button>
-      </form>
+    
+    </div>
       <Footer />
     </div>
   );
