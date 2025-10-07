@@ -1,136 +1,4 @@
-/* .hero-section {
-    height: 80vh;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    padding-top: 30px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; 
- 
-  
-    margin-top: 0; 
-  }
-  
 
-  .hero-content {
-    height: 200vh;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    text-align: center;
-  
-   
-  }
-  
-  .words {
-    
-    width: 63%;
-
-    padding: 15px;
-    border-radius: 10px;
-  }
-  
-
-  .hero-content h1 {
-    font-size: clamp(1.8rem, 5vw, 3rem);
-    font-weight: bold;
-    line-height: 1.2;
-  }
-  
-
-  .hero-content p {
-    font-size: clamp(1rem, 2.5vw, 1.3rem);
-    margin-top: 10px;
-    line-height: 1.6;
-  }
-  
-
-  .hero-buttons {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-  
-
-  .btn1{
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background: #5f117c;
-    color: white;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    transition: 0.3s;
-  }
-  .btn2{
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: #FFF6F6;
-    opacity: 0.9;
-    color: white;
-    font-size: clamp(0.9rem, 2vw, 1rem);
-    transition: 0.3s;
-    border: 2px solid white;
-  }
-  
-  .hero-buttons button:hover {
-    background: #7d1aa5;
-  }
-
-  .page-content {
-    min-height: 220vh;
- 
-    padding: 20px;
-    margin-top: 20px;
-  }
-
-  
-
-  @media (max-width: 992px) {
-    .navbar{
-      width: 100%;
-      border: 2px solid red;
-    }
-    .words {
-      width: 70%;
-    }
-  }
-  
-
-  @media (max-width: 600px) {
-    .hero-section {
-      height: auto;
-      padding: 40px 20px;
-    }
-  
-    .words {
-      width: 100%;
-    }
-  
-    .hero-content {
-      padding: 10px;
-    }
-  
-    .hero-buttons {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .hero-buttons button {
-      width: 100%;
-      max-width: 250px;
-    }
-  } */
 
 
   .hero-section {
@@ -228,8 +96,9 @@
 }
 
 .page-content {
-    min-height: 100vh;
+    min-height: 90vh;
     padding: 2rem;
+ 
 }
 
 /* Ensure background image covers properly on all devices */

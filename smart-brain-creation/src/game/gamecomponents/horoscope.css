@@ -17,17 +17,18 @@
   gap: 40px;
 }
 
-/* Main Card Section */
+/* ---------- MAIN CARD ---------- */
 .hopscape-card {
   display: flex;
   max-width: 1100px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
+/* LEFT SIDE IMAGE SECTION */
 .image-section {
   flex: 0 0 330px;
   background: #2a1a3a;
@@ -35,27 +36,13 @@
   align-items: center;
   justify-content: center;
   padding: 20px;
+  background-size: contain;       /* ensures image is fully visible */
+  background-repeat: no-repeat;
+  background-position: center;    /* keeps it centered */
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.image-placeholder {
-  width: 100%;
-  height: 290px;
-  background: linear-gradient(135deg, #3a2a4a 0%, #2a1a3a 100%);
-  border: 2px dashed rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.image-placeholder::after {
-  content: 'Main Image';
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 14px;
-  font-weight: 500;
-}
-
+/* Right side content */
 .content-section {
   flex: 1;
   padding: 40px 50px;
@@ -96,6 +83,7 @@
   color: #4a2c5e;
 }
 
+/* Rating stars */
 .rating {
   display: flex;
   gap: 8px;
@@ -108,6 +96,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Download button */
 .download-btn {
   background: #ffffff;
   border: none;
@@ -127,7 +116,7 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Game Gallery Section */
+/* ---------- GAME GALLERY ---------- */
 .game-gallery {
   display: flex;
   gap: 20px;
@@ -135,30 +124,32 @@
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
+  
 }
 
 .game-screenshot {
   flex: 0 0 auto;
   width: 200px;
   height: 260px;
-  background: rgba(0, 0, 0, 0.3);
+  /* background: rgba(0, 0, 0, 0.3); */
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 3px solid rgba(255, 255, 255, 0.1);
+
 }
 
 .game-screenshot:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
+/* IMAGE INSIDE GALLERY */
 .screenshot-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #2a4a5e 0%, #1a2a3a 100%);
+  /* background: linear-gradient(135deg, #2a4a5e 0%, #1a2a3a 100%); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,16 +159,11 @@
 .screenshot-placeholder img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;   /* makes full image visible */
+  object-position: center; /* centers it perfectly */
 }
 
-.placeholder-text {
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 13px;
-  font-weight: 600;
-}
-
-/* Responsive Design */
+/* ---------- RESPONSIVE DESIGN ---------- */
 @media (max-width: 1200px) {
   .game-screenshot {
     width: 180px;
@@ -189,20 +175,19 @@
   .hopscape-card {
     flex-direction: column;
   }
-  
+
   .image-section {
     flex: 0 0 auto;
     width: 100%;
+    height: 300px;
+    background-size: contain;
+    background-position: center;
   }
-  
-  .image-placeholder {
-    height: 250px;
-  }
-  
+
   .content-section {
     padding: 30px 40px;
   }
-  
+
   .title {
     font-size: 36px;
   }
@@ -222,7 +207,7 @@
   .content-section {
     padding: 25px 30px;
   }
-  
+
   .title {
     font-size: 32px;
   }
@@ -249,16 +234,14 @@
 
   .image-section {
     padding: 15px;
-  }
-
-  .image-placeholder {
-    height: 200px;
+    height: 220px;
+    
   }
 
   .content-section {
     padding: 20px 25px;
   }
-  
+
   .title {
     font-size: 28px;
     margin-bottom: 15px;
@@ -293,6 +276,7 @@
   .game-screenshot {
     width: 100%;
     height: 240px;
+   
   }
 }
 

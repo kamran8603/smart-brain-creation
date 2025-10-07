@@ -31,7 +31,8 @@ export const homedata = {
       maintext: "Connect with us",
       paragraph:
         "Ready to bring innovative creative education to your school? Get in touch with us to schedule a consultation and learn more about our programs.",
-      btn: "Send Message",
+        btn: "Explore Programs",
+      btn2: "Send Message",
     },
     "/events": {
       maintext: "Creative & Digital Education",

@@ -66,7 +66,7 @@ function GameDivision() {
         ))}
       </div>
 
-      {/* Launching Section */}
+ 
       <div className="game-division-launching">
         <h2 className="launching-title">Games We're Launching</h2>
         <p className="launching-desc">Real games, real impact, created with student collaboration</p>

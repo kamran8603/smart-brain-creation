@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 
 import homeimg from "../assets/background.jpg";
@@ -44,8 +44,8 @@ function Approuter() {
               <h1>{content.maintext}</h1>
               <p>{content.paragraph}</p>
               <div className="hero-buttons">
-                {content.btn && <button className="btn1">{content.btn}</button>}
-                {content.btn2 && <button className="btn2">{content.btn2}</button>}
+                {content.btn && <Link to="/programs"><button className="btn1">{content.btn}</button></Link>}
+                {content.btn2 &&<Link to="/contact"> <button className="btn2">{content.btn2}</button></Link>}
               </div>
               
             </>

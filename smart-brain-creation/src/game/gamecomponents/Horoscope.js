@@ -1,24 +1,29 @@
 import React from 'react';
 import './horoscope.css';
+import Footer from "../../pages/Footer/Footer"
+import img1forhome from "../game section assets/gamehomeimage.png"
+import gameimg1 from "../game section assets/gamescreenshot.png"
+import gameimg2 from "../game section assets/gamescreenshot1.png"
+import  gameimg3 from "../game section assets/gamescreenshot2.png"
+import gameimg4 from "../game section assets/gamescreenshot3.png"
+import gameimg5 from "../game section assets/gamescreenshot4.png"
 
 const HopscapeCard = () => {
 
   const gameImages = [
-    'image1.png', 
-    'image2.png',
-    'image3.png',
-    'image4.png',
-    'image5.png'
+   gameimg1, 
+    gameimg2,
+    gameimg3,
+    gameimg4,
+    gameimg5
   ];
 
   return (
     <div className="hopscape-container">
   
       <div className="hopscape-card">
-        <div className="image-section">
-          <div className="image-placeholder">
+        <div className="image-section" style={{ backgroundImage: `url(${img1forhome})` }}>
           
-          </div>
         </div>
         
         <div className="content-section">
@@ -47,12 +52,13 @@ const HopscapeCard = () => {
         {gameImages.map((img, index) => (
           <div key={index} className="game-screenshot">
             <div className="screenshot-placeholder">
-              {/* Replace this div with: <img src={img} alt={`Game screenshot ${index + 1}`} /> */}
-              <span className="placeholder-text">Screenshot {index + 1}</span>
+              <img src={img} alt={`Game screenshot ${index + 1}`} /> 
+              {/* <span className="placeholder-text">Screenshot {index + 1}</span> */}
             </div>
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 .footer-main-container {
-  background: linear-gradient(135deg, #5f117c 0%, #46105e 100%);
+  /* background: linear-gradient(135deg, #5f117c 0%, #46105e 100%); */
   color: #ffffff;
+   background-color: #501069;
   padding: 60px 40px 20px 40px;
   width: 100%;
   box-sizing: border-box;

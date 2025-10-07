@@ -6,7 +6,8 @@
 
 /* Container */
 .privacy {
- background: linear-gradient(135deg, #5f117c 0%, #46105e 100%);
+  background-color: #501069;
+ /* background: linear-gradient(135deg, #5f117c 0%, #46105e 100%); */
  display: flex;
   flex-direction: column;
   align-items: flex-start; /* align everything to the left */
