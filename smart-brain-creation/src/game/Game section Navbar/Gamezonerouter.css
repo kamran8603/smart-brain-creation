@@ -13,6 +13,7 @@
     padding: 0.6rem 2rem;
     position: relative;
     z-index: 1000;
+  
 }
 
 .logo {
@@ -29,6 +30,7 @@
     gap: 1.5rem;
     align-items: center;
     flex-wrap: wrap;
+    
 }
 
 .navbar-btns > a {

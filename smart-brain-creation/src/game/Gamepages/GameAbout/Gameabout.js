@@ -5,7 +5,7 @@ import Footer from "../../../pages/Footer/Footer"
 function Gameabout()
 {
      return(
-<section >
+<section className="section-about-game" >
 <div className="privacy">
      <h3>Privacy Policy</h3>
      <p className="effect">Effective Date: 30-08-2025</p>

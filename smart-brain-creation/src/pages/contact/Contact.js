@@ -13,15 +13,15 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID", // replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // replace with your EmailJS template ID
+        "service_ikofdm7", 
+        "template_g708ola", 
         form.current,
-        "YOUR_PUBLIC_KEY" // replace with your EmailJS public key
+        "4bGJi7UzE20Hh3T0e" 
       )
       .then(
         (result) => {
           console.log(result.text);
-          setIsSubmitted(true); // show success message
+          setIsSubmitted(true); 
         },
         (error) => {
           console.log(error.text);

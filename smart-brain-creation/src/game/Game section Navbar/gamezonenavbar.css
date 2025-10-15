@@ -11,6 +11,8 @@
     justify-content: flex-start;
     padding-top: 2rem;
     border-radius: 1rem;
+
+    
 }
 
 .hero-content {
@@ -24,7 +26,7 @@
     text-align: center;
     margin-top: 2rem;
     flex-grow: 1;
-   
+    
 }
 
 .words {
@@ -94,9 +96,9 @@
 }
 
 .page-content {
-    min-height: 300vh;
+    min-height: 200vh;
     padding: 2rem;
-   
+  
 }
 
 

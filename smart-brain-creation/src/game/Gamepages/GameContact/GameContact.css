@@ -1,122 +1,95 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-.contact {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Contact Info Boxes */
-.contact1 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  padding: 40px 20px;
+.contact-section {
   width: 100%;
   max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background-color: #501069;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+
 }
 
-.contact1 .box .phone
-{
-  height: 80px;
-  width: 50px;
-  color: #ffffff;
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+    
 }
 
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(
-    ellipse 72.36% 72.36% at 50.00% 27.64%,
-    rgba(245, 219, 255, 0.27) 72%,
-    rgba(232, 174, 255, 0.27) 100%
-  );
-  
-  border-radius: 15px;
+.info-card {
+  background: #f8f5ff;
+  border-radius: 1rem;
+  padding: 2rem;
   text-align: center;
-  padding: 20px;
-  min-height: 200px;
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(95,17,124,0.08);
 }
 
-.box:hover {
+.info-card:hover {
   transform: translateY(-5px);
+  background: #f0e8ff;
 }
 
-.phone {
-  width: 45px;
-  height: 45px;
-  margin-bottom: 12px;
+.info-icon {
+  font-size: 2rem;
+  color: #5F117C;
+  margin-bottom: 1rem;
 }
 
-.p1 {
-  color: #ffffff;
-  margin-bottom: 8px;
-  font-size: 28px;
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
+.info-card h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
-.p2,
-.p3 {
-  color: #ffffff;
-  font-size: 16px;
-  font-family: Poppins, sans-serif;
-  font-weight: 500;
-  line-height: 1.5;
-  word-wrap: break-word;
+.info-card p {
+  color: #666;
+  font-size: 0.95rem;
 }
 
-.p2 {
+.info-card a {
+  color: #5F117C;
+  text-decoration: none;
+}
+
+.info-card a:hover {
   text-decoration: underline;
 }
 
-/* Form Section Heading */
-.formout h3 {
-  color: #ffffff;
+/* 📝 Form Heading */
+.form-heading {
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 10px;
-  font-size: 32px;
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
+  margin-bottom: 2.5rem;
 }
 
-.formout p {
-  text-align: center;
-  margin-bottom: 20px;
-  color: white;
-  font-size: 18px;
-  font-family: Poppins, sans-serif;
-  font-weight: 400;
+.form-heading h2 {
+  font-size: 2rem;
+  color: #5F117C;
+  margin-bottom: 0.5rem;
 }
 
-/* Form */
-.form {
-  width: 100%;
-  max-width: 850px;
-  margin: 20px auto 60px auto;
-  padding: 30px 20px;
-  border-radius: 15px;
-  background: radial-gradient(
-    ellipse 72.36% 72.36% at 50.00% 27.64%,
-    rgba(245, 219, 255, 0.27) 72%,
-    rgba(232, 174, 255, 0.27) 100%
-  );
-  /* border: 1px #5f117c solid; */
+.form-heading p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* 📋 Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .form-row {
   display: flex;
-  gap: 20px;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
@@ -124,112 +97,123 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
-  min-width: 250px;
+}
+
+.full-width {
+  width: 100%;
 }
 
 .form-group label {
-  font-size: 16px;
-  margin-bottom: 6px;
   font-weight: 600;
-  color: #ffffff;
-  font-family: Poppins, sans-serif;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  padding: 12px;
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 8px;
   font-size: 1rem;
-  outline: none;
-  width: 100%;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: #7a0fa3;
+  outline: none;
+  border-color: #5F117C;
+  box-shadow: 0 0 6px rgba(95, 17, 124, 0.3);
 }
 
-/* Button */
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* 🚀 Submit Button */
 .submit-btn {
-  width: 100%;
-  padding: 14px;
-  background: #5f117c;
+  background: #5F117C;
   color: #fff;
-  font-size: 18px;
-  font-family: Poppins, sans-serif;
-  font-weight: 600;
   border: none;
-  border-radius: 8px;
+  padding: 0.9rem 2rem;
+  font-size: 1.05rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: background 0.3s;
-  box-shadow: 5px 5px 20px rgba(246, 249, 249, 0.9);
+  transition: all 0.3s ease;
+  align-self: center;
 }
 
 .submit-btn:hover {
-  background: #7a0fa3;
+  background: #440a59;
+  transform: translateY(-2px);
 }
 
-/* Status Message */
-.status-msg {
+/* ✅ Success Message Animation */
+.success-message {
   text-align: center;
-  margin-top: 15px;
-  font-weight: bold;
-  color: #7a0fa3;
+  padding: 5rem 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  border: 1px solid #ddd;
+  animation: fadeIn 0.8s ease forwards;
 }
 
-/* ---------------- RESPONSIVE DESIGN ---------------- */
-
-/* Tablets */
-@media (max-width: 992px) {
-  .p1 {
-    font-size: 24px;
-  }
-  .p2,
-  .p3 {
-    font-size: 14px;
-  }
-  .formout h3 {
-    font-size: 28px;
-  }
-  .formout p {
-    font-size: 16px;
-  }
+.success-message h2 {
+  font-size: 2rem;
+  color: #5F117C;
+  margin-bottom: 1rem;
+  animation: popIn 0.8s ease forwards;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
-  .contact1 {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
+.success-message p {
+  font-size: 1.125rem;
+  color: #444;
+  animation: fadeSlideIn 1s ease forwards;
+}
 
-  .form {
-    padding: 20px 15px;
-  }
+/* ✨ Keyframes */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
 
+@keyframes popIn {
+  0% { opacity: 0; transform: translateY(20px) scale(0.8); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
   .form-row {
     flex-direction: column;
   }
 
-  .form-group {
-    min-width: 100%;
+  .contact-section {
+    padding: 2rem 1rem;
   }
 
-  .p1 {
-    font-size: 22px;
+  .info-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-cards {
+    grid-template-columns: 1fr;
   }
 
-  .p2,
-  .p3 {
-    font-size: 14px;
+  .form-heading h2 {
+    font-size: 1.5rem;
   }
 
   .submit-btn {
-    font-size: 16px;
-    padding: 12px;
+    width: 100%;
   }
 }
